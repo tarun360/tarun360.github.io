@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <i>“It takes something more than intelligence to act intelligently”</i> ― Fyodor Dostoyevsky
+subtitle: 
 
 profile:
   align: right
