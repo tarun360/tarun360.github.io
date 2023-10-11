@@ -17,15 +17,13 @@ latest_posts: false  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-As a software engineer at [D. E. Shaw India](https://www.deshawindia.com/). I'm currently working on developing a high-performance cluster (HPC) scheduling software for the cloud, with a specific focus on orchestrating machine learning tasks, such as model training.
+I graduated from Computer Science and Engineering department at Indian Institute of Technology Indore. I had the oppurtunity to collaborate with world-class laboratories around the world in the field machine learning - [Xu lab@CBD_SCS_CMU](https://xulabs.github.io/), [Speech and Language laboratory - NTU](https://personal.ntu.edu.sg/aseschng/speechLab_intro.html), [Skit.ai](skit.ai), [OPTIMAL lab - IIT Indore](https://iiti.ac.in/people/~mtanveer/). I currently work as a software engineer at [D. E. Shaw India](https://www.deshawindia.com/), where I develop high-performance cluster (HPC) scheduling software for the cloud. My work particularly focuses on orchestrating machine learning tasks, including model training.
 
-I graduated from Computer Science and Engineering department at Indian Institute of Technology Indore. I had the oppurtunity to collaborate with world-class laboratories around the world in the field machine learning - [Xu lab@CBD_SCS_CMU](https://xulabs.github.io/), [Speech and Language laboratory - NTU](https://personal.ntu.edu.sg/aseschng/speechLab_intro.html), [Skit.ai](skit.ai), [OPTIMAL lab - IIT Indore](https://iiti.ac.in/people/~mtanveer/). 
+In my spare time, I really enjoy reading books! My favorites, and the ones that have impacted me the most, are <i>The Beginning of Infinity</i>, <i>Man's Search for Meaning</i>, and <i>Animal Farm</i>.
+
+Current favourite quote: <i>"I believe that it would be worth trying to learn something about the world even if in trying to do so we should merely learn that we do not know much ... It might be well for all of us to remember that, while differing widely in the various little bits we know, in our infinite ignorance we are all equal."</i> ― Karl Popper in his book Conjectures and Refutations (1963)
 
 ---
-
-<font size="2.5">
-Current favourite quote: <i>"I believe that it would be worth trying to learn something about the world even if in trying to do so we should merely learn that we do not know much ... It might be well for all of us to remember that, while differing widely in the various little bits we know, in our infinite ignorance we are all equal."</i> ― Karl Popper in his book Conjectures and Refutations (1963)
-</font>
 
 <!---
 (Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
