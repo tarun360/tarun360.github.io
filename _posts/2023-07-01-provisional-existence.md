@@ -5,7 +5,7 @@ date: 2023-07-01
 description: Insights after working as a software engineer for 1 year.
 tags: psych
 categories: personal
-giscus_comments: true
+giscus_comments: false
 related_posts: true
 ---
 Sometime back I came across the quote “The days are long, but the years are short” by Gretchen Rubin and it immediately struck a chord with me. I checked its origin and found that it's a parent adage implying that children grow up fast. But for me it somehow reminded me of my daily life as a software engineer. The days are long -- meetings, debugging, some coding, and some more debugging. That stupid bug takes forever to fix, seemingly the most important thing in my life at the moment, but a week later I can’t even remember what it was. 

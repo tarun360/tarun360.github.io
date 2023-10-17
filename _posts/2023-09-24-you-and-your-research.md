@@ -5,7 +5,7 @@ date: 2023-08-05
 description: Thoughts from the famous talk "You and your research"
 tags: work
 categories: work 
-disqus_comments: true
+disqus_comments: false
 related_posts: true
 ---
 The 'You and Your Research' talk by Dr. Richard Hamming is a fantastic discussion applicable to careers in any field. One can watch it on YouTube <a href="https://youtu.be/a1zDuOPkMSw?si=K07WoHnMhQ8Nm1fR">here</a>. Dr. Hamming imparts great advice on envisioning your research or career and leading a purposeful life. Here I would like to share my thoughts on two specific ideas mentioned in this talk:
