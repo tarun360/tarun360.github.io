@@ -6,9 +6,7 @@ nav: true
 nav_order: 5
 ---
 
-## Some failed projects
-
-I somehow feel like some of my failed projects are maybe more interesting than the ones that actually worked out. So, this is a page to record them since I am not sure how to squeeze them into a regular ol' resume.
+I somehow feel like some of my failed/incomplete projects are maybe more interesting than the ones that actually worked out. So, this is a page to record them since I am not sure how to squeeze them into a regular ol' resume.
 
 #### Real-time capabilities of Android OS
 

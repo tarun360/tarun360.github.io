@@ -6,14 +6,16 @@ nav: true
 nav_order: 4
 ---
 
-- <i>“It takes something more than intelligence to act intelligently.”</i> ― Fyodor Dostoyevsky
+- <i>“The days are long, but the years are short.”</i> ― Gretchen Rubin
+
+- <i>"The secret to doing good research[/work] is always to be a little underemployed. You waste years by not being able to waste hours.”</i> ― Amos Tversky
+
+- <i>"I believe that it would be worth trying to learn something about the world even if in trying to do so we should merely learn that we do not know much ... It might be well for all of us to remember that, while differing widely in the various little bits we know, in our infinite ignorance we are all equal."</i> ― Karl Popper in his book Conjectures and Refutations (1963)
+
+- <i>“It follows that humans, people and knowledge are not only objectively significant: they are by far the most significant phenomena in nature – the only ones whose behaviour cannot be understood without understanding everything of fundamental importance.”</i> David Deutsch in his book The Beginning of Infinity
 
 - <i>"The mind is sharper and keener in seclusion and uninterrupted solitude. No big laboratory is needed in which to think. Originality thrives in seclusion free of outside influences beating upon us to cripple the creative mind. Be alone, that is the secret of invention; be alone, that is when ideas are born."</i> ― Nikola Tesla
 
-- <i>“Optimise for being useful.”</i> ― Elon Musk
+- <i>“You do not need to leave your room. Remain sitting at your table and listen. Do not even listen, simply wait, be quiet, still and solitary. The world will freely offer itself to you to be unmasked, it has no choice, it will roll in ecstasy at your feet.”</i> ― Franz Kafka
 
-- <i>“The days are long, but the years are short.”</i> ― Gretchen Rubin
-
-- <i>"You waste years by not being able to waste hours.”</i> ― Amos Tversky
-
-- <i>“The three most harmful addictions are heroin, carbohydrates, and a monthly salary.”</i> ― Nassim Nicholas Taleb
+- <i>“Above all, don't lie to yourself. The man who lies to himself and listens to his own lie comes to a point that he cannot distinguish the truth within him, or around him, and so loses all respect for himself and for others. And having no respect he ceases to love.”</i> ― Fyodor Dostoyevsky
