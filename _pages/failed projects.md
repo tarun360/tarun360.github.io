@@ -8,9 +8,9 @@ nav_order: 5
 
 I somehow feel like some of my failed/incomplete projects are maybe more interesting than the ones that actually worked out. So, this is a page to record them since I am not sure how to squeeze them into a regular ol' resume.
 
-#### Real-time capabilities of Android OS
+#### Evaluating Android 11 OS for real-time systems
 
-We executed multi-threaded C code on our personal Android mobile phones (courtesy pandemic) to collect statistics like interrupt latency and semaphore shuffling time. This was aimed at assessing the real-time performance of Android 11. We concluded that assessing metrics solely through software will not be accurate enough. Hardware instrumentation was deemed necessary for a accurate evaluation, but unfortunately, we lacked access to it (courtesy pandemic). This project stood out as one of the rare projects without any curation: no curated datasets or a final "state-of-the-art" benchmark to surpass — just pure happy hacking/researching.
+We executed multi-threaded C code on our personal Android mobile phones (courtesy pandemic) to collect statistics like interrupt latency and semaphore shuffling time. This was aimed at empirically assessing the real-time performance of Android 11. We concluded that assessing metrics solely through software will not be accurate enough. Hardware instrumentation was deemed necessary for a accurate evaluation, but unfortunately, we lacked access to it (courtesy pandemic). This project stood out as one of the rare projects without any curation: no curated datasets or a final "state-of-the-art" benchmark to surpass — just pure happy hacking/researching.
 
 #### Vital signs monitoring from video
 
