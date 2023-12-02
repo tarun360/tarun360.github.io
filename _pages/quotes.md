@@ -8,6 +8,8 @@ nav_order: 4
 
 - <i>“The days are long, but the years are short.”</i> ― Gretchen Rubin
 
+- <i>“We are kept from our goal not by obstacles, but by a clear path to a lesser goal.”</i> ― Robert Brault
+
 - <i>"The secret to doing good research[/work] is always to be a little underemployed. You waste years by not being able to waste hours.”</i> ― Amos Tversky
 
 - <i>"Expecting to create an AGI without first understanding how it works is like expecting skyscrapers to fly if we build them tall enough"</i> ― David Deutsch in [this](https://aeon.co/essays/how-close-are-we-to-creating-artificial-intelligence) article.
