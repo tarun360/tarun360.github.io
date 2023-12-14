@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Beginning of infinity | Tarun  Gupta</title>
+    <title>Research directions | Tarun  Gupta</title>
     <meta name="author" content="Tarun  Gupta">
-    <meta name="description" content="A case for beginning of infinity at D. E. Shaw">
+    <meta name="description" content="Some worthwhile research directions">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -33,7 +33,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://tarun360.github.io/blog/2023/beg-inf/">
+    <link rel="canonical" href="https://tarun360.github.io/blog/2023/ai-research-directions/">
     
     <!-- Dark Mode -->
     
@@ -118,33 +118,74 @@
 <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Beginning of infinity</h1>
-    <p class="post-meta">August 5, 2023</p>
+    <h1 class="post-title">Research directions</h1>
+    <p class="post-meta">December 14, 2023</p>
     <p class="post-tags">
       <a href="/blog/2023"> <i class="fas fa-calendar fa-sm"></i> 2023 </a>
         ·  
-        <a href="/blog/tag/psych">
-          <i class="fas fa-hashtag fa-sm"></i> psych</a>  
+        <a href="/blog/tag/research">
+          <i class="fas fa-hashtag fa-sm"></i> research</a>  
           
         ·  
-        <a href="/blog/category/personal">
-          <i class="fas fa-tag fa-sm"></i> personal</a>  
+        <a href="/blog/category/research">
+          <i class="fas fa-tag fa-sm"></i> research</a>  
           
 
     </p>
   </header>
 
   <article class="post-content">
-    <p>On July 19th, 2023, there was a big meeting at D. E. Shaw’s office in India, where I work as a software engineer. The purpose of the meeting was to bring together important leaders from the New York and Hyderabad offices to talk about the company’s future plans, challenges, and strategies. Something really interesting happened during the meeting when a top boss unexpectedly said, “We might run out of ideas.” This got me thinking because it pointed out a big risk and showed how important it is to always come up with new and creative trading strategies, especially as the old ones become less effective over time.</p>
+    <p>This blog is inspired by the question posed by Dr. Richard Hamming in his famous “You and Your Research” talk: “If what you are working on is not important, and it’s not likely to lead to important things, then why are you working on it?”</p>
 
-<p>Is it possible to continuously improve trading strategies and continue to generate profits indefinitely? There is a somewhat reasonable argument suggesting that all trading strategies employed by various firms would strive for maximum efficiency, leading to a potential state of equilibrium where further optimization becomes unlikely. In this hypothetical scenario, all trading strategies across firms would reach an equilibrium, efficient state, making further improvement seemingly impossible.</p>
+<p>I have two specific directions in mind that I believe can lead to significant <i>things</i> in the field of AI (excluding applications in fields like medicine and biology): the first involves constructing a virtual playground for embodied multi-agent collaboration that can co-evolve into more intelligent agents, and the second focuses on building AI models that emulate the neural structures of the brain. I will briefly describe these two ideas below.</p>
 
-<p>This is where David Deutch’s mind-bending book, “Beginning of Infinity,” presents a compelling argument favouring infinite progress, from which one could infer the continuous improvement of trading algorithms. The book asserts that as long as error correction mechanisms are integrated into a system (as is inherent in trading markets), the system can infinitely self-improve. It posits that anything allowed by the physical laws of nature can be achieved through the continual generation of knowledge and error-correcting mechanisms.</p>
+<p><strong>Constructing a virtual playground for embodied multi-agent collaboration</strong></p>
 
-<p>Getting the full grasp of this never-ending progress notion needs more than a quick summary. That’s why I enthusiastically encourage diving into “Beginning of Infinity.” This book stands as the most impactful read in my life thus far.</p>
+<p>Exciting advancements have been made in constructing virtual playgrounds to investigate single-agent exploration [1] and multi-agent collaboration [2, 3]. The latter, as per my exploration, is less widely studied than the former. It is the latter that I believe holds more potential. These environments typically feature a leader agent and a follower agent working together to solve tasks. Leader-follower interactions can occur through various methods. For instance, the leader might issue instructions for a task, such as selecting a specific card from a set of distractor cards in the virtual environment, as in [2]. Subsequently, the follower is tasked with completing the assigned objective. Dialogue may transpire between the leader’s instructions and the follower’s actions. Notably, these instructions are typically communicated in a natural language, say English. These virtual environments are valuable for studying natural language interactions within collaborative and embodied environments.</p>
 
-<p>The title, “Beginning of Infinity,” is really interesting: Within an infinite set of whole numbers, any number you select (e.g., 10<sup>82</sup> ≈ the number of atoms in the universe) will always be <i>unusually</i> close to 0 (i.e., the beginning). Hence, in the grand scheme of infinity, we are always at the beginning – beginning of infinity – always.</p>
+<p><i>I have an intuition, a vague idea, which I believe could advance the research on embodied multi-agent collaboration</i>, drawing inspiration from [2, 4, 5], and, to the best of my knowledge, unexplored thus far: Construct a virtual environment featuring a leader and a follower. The follower’s role is to observe the leader executing a task and intelligently imitate them. For instance, if the leader hides behind a tree to evade a lion, the follower should seek shelter behind an available object, like a large stone nearest to it, to avoid the lion. Blindly copying the leader, such as traveling to the leader’s position and attempting to hide behind the same small tree, could harm both.</p>
 
+<p>Initially, the follower may adopt an approach akin to behavior parsing [6], employing a mechanistic imitation model, similar to ape behavior, based on statistical correlation without a deep understanding of the leader’s motives. However, as tasks become more difficult, there would be evolutionary pressure for the follower to develop a nuanced understanding of why a leader performs a specific task and determine the appropriate imitation variant, i.e., not copying the behavior blindly but copying the meaning of the behavior, i.e., the meme [5]. This necessitates creativity and the formulation of explanatory theories by the follower [4].</p>
+
+<p>It would be advantageous for the follower to infer the leader’s mental state [7] (Theory of Mind) and generate explanatory theories about the reasons behind the leader’s actions and the contexts in which the follower should imitate them. Furthermore, in this virtual environment, communication between the leader and follower could be facilitated through some communication channel, such as exchanging arrays of bits. Since communication between the leader and follower would be helpful for the follower to understand the meme, it’s conceivable to imagine this array of bits transforming into a rudimentary sign language (emergent communication [8]).</p>
+
+<p>This is just an intuitive direction that I think may lead to important discoveries. There is much to be figured out here; for example, the most difficult aspect would be how to design tasks which the leader agent is supposed to do, and the joint training of the leader and follower agent model. Perhaps, as a starting point one can consider crowdsourcing to generate the leader tasks, similar to [2], and then try to intelligently combine these tasks to generate more of them. Additionally, one would need to greatly improve the Theory of Mind idea so the follower can learn to model the leader’s worldview effectively. Lastly, constructing such a virtual environment would necessitate proficient game and software development skills.</p>
+
+<p><strong>Building AI models that mimic the neural structures of the brain</strong></p>
+
+<p>The present state of constructing increasingly complex machine learning architectures appears futile in creating a genuinely intelligent AI, or AGI. Merely combining different modalities blindly, such as outfitting a robot with vision, auditory, and text-understanding models, will not magically transform it into an intelligent agent. As articulated by Deutsch in [9], “Expecting to create an AGI without first understanding in detail how it works is like expecting skyscrapers to learn to fly if we build them tall enough.”</p>
+
+<p>A more promising approach with a higher potential for AGI development would be to construct models inspired by the neural structures and geometries of the brain. Given that the brain inherently serves as an AGI, and with techniques such as fMRI, BOLD, and searchlight providing avenues for studying its internal structure, it is logical to examine the brain’s activity during diverse tasks. Subsequently, building AI models to replicate the observed neuronal structures during these tasks is a worthwhile strategy.</p>
+
+<p>A noteworthy paper in this context is “Neural Knowledge Assembly in Humans and Neural Networks” [10]. This paper intrigued me due to the authors’ clever approach to testing a hypothesis (the elongation scheme) on rapid knowledge assembly in the human brain through a creative decision-making task performed by human participants. They monitored their brains’ dorsal stream structures using BOLD and searchlight techniques. Subsequently, the authors made a strikingly simple and elegant addition to a modest 2-layer neural network (a certainty matrix) to mimic the elongation scheme observed in human brains. In the current landscape of machine learning research, which often leans towards larger models, empirical fine-tuning, and explanation-less progress, it was invigorating to encounter a fundamental enhancement to a simple 2-layer neural network model inspired by knowledge assembly processes within the human brain.</p>
+
+<p>Some other works include how speech aspects like context [11] and phonemes [12] impact neural structural representation. Understanding the representation structure of language in the human brain could aid in designing NLP models that emulate these structures, potentially resulting in improved NLP models similar to the approach taken in [10]. Overall, this fundamental research approach, where advancements in basic machine learning models are inspired by brain processes driven by conjecture and explanatory theories rather than solely increasing model complexity, is a worthwhile direction in pursuit of building better AI models.</p>
+
+<p><strong>References</strong></p>
+
+<p>[1] Zhu, Hao, et al. “EXCALIBUR: Encouraging and Evaluating Embodied Exploration.” Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2023.</p>
+
+<p>[2] Sharf, Jacob, Mustafa Omer Gul, and Yoav Artzi. “CB2: Collaborative Natural Language Interaction Research Platform.” arXiv preprint arXiv:2303.08127 (2023).</p>
+
+<p>[3] Suhr, Alane, et al. “Executing instructions in situated collaborative interactions.” arXiv preprint arXiv:1910.03655 (2019).</p>
+
+<p>[4] Deutsch, D. (2011). The beginning of infinity: Explanations that transform the world. New York: Viking.</p>
+
+<p>[5] Blackmore Susan J. The Meme Machine. Oxford University Press 1999.</p>
+
+<p>[6] Byrne RW. Imitation as behaviour parsing. Philos Trans R Soc Lond B Biol Sci. 2003 Mar 29;358(1431):529-36. doi: 10.1098/rstb.2002.1219. PMID: 12689378; PMCID: PMC1693132.</p>
+
+<p>[7] Liu, Andy, et al. “Computational Language Acquisition with Theory of Mind.” arXiv preprint arXiv:2303.01502 (2023).</p>
+
+<p>[8] Lazaridou, Angeliki, and Marco Baroni. “Emergent multi-agent communication in the deep learning era.” arXiv preprint arXiv:2006.02419 (2020).</p>
+
+<p>[9] https://aeon.co/essays/how-close-are-we-to-creating-artificial-intelligence</p>
+
+<p>[10] Nelli, Stephanie, et al. “Neural knowledge assembly in humans and neural networks.” Neuron 111.9 (2023): 1504-1516.</p>
+
+<p>[11] Deniz, Fatma, et al. “Semantic representations during language comprehension are affected by context.” Journal of Neuroscience.</p>
+
+<p>[12] Gong, Xue L., et al. “Phonemic segmentation of narrative speech in human cerebral cortex.” Nature Communications.</p>
 
   </article>
 
@@ -179,7 +220,7 @@
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2023 Tarun  Gupta. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>.
-Last updated: December 02, 2023.
+Last updated: December 14, 2023.
       </div>
     </footer>
 
