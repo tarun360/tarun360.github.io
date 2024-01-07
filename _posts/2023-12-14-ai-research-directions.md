@@ -13,7 +13,7 @@ related_posts: true
 
 This blog is inspired by the question posed by Dr. Richard Hamming in his famous “You and Your Research” talk: “If what you are working on is not important, and it’s not likely to lead to important things, then why are you working on it?”
 
-I have two research directions in mind that I believe can lead to significant things in the field of AI (excluding applications in fields like health-care and biology, which I consider to be very promising): the first involves constructing a virtual playground for embodied multi-agent collaboration that can co-evolve into more intelligent agents, and the second focuses on building AI models that emulate the neural structures of the brain. I will briefly describe these two ideas below.
+I have two research directions (a non-exhaustive list) in mind that I believe can lead to significant things in the field of AI (excluding applications in fields like health-care and biology, which I consider to be very promising): the first involves constructing a virtual playground for embodied multi-agent collaboration that can co-evolve into more intelligent agents, and the second focuses on building AI models that emulate the neural structures of the brain. I will briefly describe these two ideas below.
 
 **Constructing a virtual playground for embodied multi-agent collaboration** 
 
