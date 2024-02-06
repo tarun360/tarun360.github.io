@@ -16,11 +16,7 @@ social: true  # includes social icons at the bottom of the page
 ---
 ### Hi there!
 
-Thanks for visiting my website. My name is Tarun. Please take a look around.
-
----
-
-Current favourite quote: <i>"I think that there is only one way to science - or to philosophy, for that matter: to meet a problem, to see its beauty and fall in love with it; to get married to it and to live with it happily, till death do ye part - unless you should meet another and even more fascinating problem or unless, indeed, you should obtain a solution. But even if you do obtain a solution, you may then discover, to your delight, the existence of a whole family of enchanting, though perhaps difficult, problem children, for whose welfare you may work, with a purpose, to the end of your days."</i> ― Karl Popper 
+Welcome to my website! I am Tarun, and I appreciate you stopping by. Feel free to explore and discover more about me.
 
 <!---
 (Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
