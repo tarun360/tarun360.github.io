@@ -8,6 +8,8 @@ nav_order: 4
 
 - <i>“The days are long, but the years are short.”</i> ― Gretchen Rubin
 
+- <i>“If what you are working on is not important, and it’s not likely to lead to important things, then why are you working on it?”</i> ― Dr. Richard Hamming in his famous “You and Your Research” talk
+
 - <i>“We are kept from our goal not by obstacles, but by a clear path to a lesser goal.”</i> ― Robert Brault
 
 - <i>"The secret to doing good research[/work] is always to be a little underemployed. You waste years by not being able to waste hours.”</i> ― Amos Tversky
