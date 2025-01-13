@@ -1,10 +1,10 @@
-―-
+---
 layout: page
 permalink: /quotes/
 title: quotes
 nav: true
 nav_order: 4
-―-
+---
 
 - <i>“In each shave lies a philosophy.”</i> ― Somerset Maugham
 
