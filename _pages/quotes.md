@@ -35,3 +35,5 @@ nav_order: 4
 - <i>"It is important that students bring a certain ragamuffin, barefoot, irreverence to their studies; they are not here to worship what is known, but to question it."</i> ― Jacob Bronowski in The Ascent of Man
 
 - <i>"You cannot get educated by this self-propagating system in which people study to pass exams, and teach others to pass exams, but nobody knows anything. You learn something by doing it yourself, by asking questions, by thinking, and by experimenting."</i> — Richard P. Feynman.
+
+- <i>"The most important thing in life is to be free"</i> — Sourav Chatterjee in [this](https://youtu.be/YpaytTN1EgA?si=FabIFxAN0mzqfLbr) video.
