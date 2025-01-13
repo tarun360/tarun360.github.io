@@ -1,10 +1,10 @@
----
+―-
 layout: page
 permalink: /quotes/
 title: quotes
 nav: true
 nav_order: 4
----
+―-
 
 - <i>“In each shave lies a philosophy.”</i> ― Somerset Maugham
 
@@ -28,6 +28,10 @@ nav_order: 4
 
 - <i>"The mind is sharper and keener in seclusion and uninterrupted solitude. No big laboratory is needed in which to think. Originality thrives in seclusion free of outside influences beating upon us to cripple the creative mind. Be alone, that is the secret of invention; be alone, that is when ideas are born."</i> ― Nikola Tesla
 
-- <i>"From outside, if you have dispaired of getting into it [the inner ring], you call it “That gang” or “they” or “So-and-so and his set” or “The Caucus” or “The Inner Ring.” If you are a candidate for admission you probably don’t call it anything. To discuss it with the other outsiders would make you feel outside yourself. And to mention talking to the man who is inside, and who may help you if this present conversation goes well, would be madness."</i> -- C.S. Lewis in his essay "The Inner Ring"
+- <i>"From outside, if you have dispaired of getting into it [the inner ring], you call it “That gang” or “they” or “So-and-so and his set” or “The Caucus” or “The Inner Ring.” If you are a candidate for admission you probably don’t call it anything. To discuss it with the other outsiders would make you feel outside yourself. And to mention talking to the man who is inside, and who may help you if this present conversation goes well, would be madness."</i> ― C.S. Lewis in his essay "The Inner Ring"
 
-- <i>"We are told in Scripture that those who ask get. That is true, in senses I can’t now explore. But in another sense there is much truth in the schoolboy’s principle “them as asks shan’t have.” To a young person, just entering on adult life, the world seems full of “insides,” full of delightful intimacies and confidentialities, and he desires to enter them. But if he follows that desire he will reach no “inside” that is worth reaching. The true road lies in quite another direction. It is like the house in Alice Through the Looking Glass."</i> -- C.S. Lewis in his essay "The Inner Ring"
+- <i>"We are told in Scripture that those who ask get. That is true, in senses I can’t now explore. But in another sense there is much truth in the schoolboy’s principle “them as asks shan’t have.” To a young person, just entering on adult life, the world seems full of “insides,” full of delightful intimacies and confidentialities, and he desires to enter them. But if he follows that desire he will reach no “inside” that is worth reaching. The true road lies in quite another direction. It is like the house in Alice Through the Looking Glass."</i> ― C.S. Lewis in his essay "The Inner Ring"
+
+- <i>"It is important that students bring a certain ragamuffin, barefoot, irreverence to their studies; they are not here to worship what is known, but to question it."</i> ― Jacob Bronowski in The Ascent of Man
+
+- <i>"You cannot get educated by this self-propagating system in which people study to pass exams, and teach others to pass exams, but nobody knows anything. You learn something by doing it yourself, by asking questions, by thinking, and by experimenting."</i> — Richard P. Feynman.
