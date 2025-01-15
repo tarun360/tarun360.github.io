@@ -12,8 +12,6 @@ nav_order: 4
 
 - <i>“The days are long, but the years are short.”</i> ― Gretchen Rubin
 
-- <i>“We are kept from our goal not by obstacles, but by a clear path to a lesser goal.”</i> ― Robert Brault
-
 - <i>"The secret to doing good research[/work] is always to be a little underemployed. You waste years by not being able to waste hours.”</i> ― Amos Tversky
 
 - <i>"Ever tried. Ever failed. No matter. Try again. Fail again. Fail better."</i> ― Samuel Beckett <i>(The real motto of optimism)</i>
@@ -37,3 +35,5 @@ nav_order: 4
 - <i>"You cannot get educated by this self-propagating system in which people study to pass exams, and teach others to pass exams, but nobody knows anything. You learn something by doing it yourself, by asking questions, by thinking, and by experimenting."</i> — Richard P. Feynman.
 
 - <i>"The most important thing in life is to be free"</i> — Sourav Chatterjee in [this](https://youtu.be/YpaytTN1EgA?si=FabIFxAN0mzqfLbr) video.
+
+- <i>"If you are so smart, then why aren't you happy?"</i> — Raj Raghunathan / Naval Ravikant.
