@@ -30,6 +30,8 @@ nav_order: 4
 
 - <i>"We are told in Scripture that those who ask get. That is true, in senses I can’t now explore. But in another sense there is much truth in the schoolboy’s principle “them as asks shan’t have.” To a young person, just entering on adult life, the world seems full of “insides,” full of delightful intimacies and confidentialities, and he desires to enter them. But if he follows that desire he will reach no “inside” that is worth reaching. The true road lies in quite another direction. It is like the house in Alice Through the Looking Glass."</i> ― C.S. Lewis in his essay "The Inner Ring"
 
+- <i>"No man who cares about originality will ever be original. It's the man who's only thinking about doing a good job or telling the truth who becomes really original -- and doesn't notice it."</i> ― C.S. Lewis
+
 - <i>"It is important that students bring a certain ragamuffin, barefoot, irreverence to their studies; they are not here to worship what is known, but to question it."</i> ― Jacob Bronowski in The Ascent of Man
 
 - <i>"You cannot get educated by this self-propagating system in which people study to pass exams, and teach others to pass exams, but nobody knows anything. You learn something by doing it yourself, by asking questions, by thinking, and by experimenting."</i> — Richard P. Feynman.
