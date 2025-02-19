@@ -36,6 +36,6 @@ nav_order: 4
 
 - <i>"If you are so smart, then why aren't you happy?"</i> — Raj Raghunathan.
 
-- <i>"If I thought of a future, I dreamt of one day founding a school in which young people could learn without boredom, and would be stimulated to pose problems and discuss them; a school in which no unwanted answers to unasked questions would have to be listened to; in which one did not study for the sake of passing examinations."</i> -- Karl Popper.I share Popper's dream and hope to creete it.
+- <i>"If I thought of a future, I dreamt of one day founding a school in which young people could learn without boredom, and would be stimulated to pose problems and discuss them; a school in which no unwanted answers to unasked questions would have to be listened to; in which one did not study for the sake of passing examinations."</i> -- Karl Popper. I share Popper's dream.
 
 - <i>“Anyway, I keep picturing all these little kids playing some game in this big field of rye and all. Thousands of little kids, and nobody's around---nobody big, I mean---except me. And I'm standing on the edge of some crazy cliff. What I have to do, I have to catch everybody if they start to go over the cliff---I mean if they're running and they don't look where they're going I have to come out from somewhere and catch them. That's all I do all day. I'd just be the catcher in the rye and all. I know it's crazy, but that's the only thing I'd really like to be.”</i> ― J.D. Salinger, The Catcher in the Rye.
