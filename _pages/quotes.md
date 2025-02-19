@@ -6,8 +6,6 @@ nav: true
 nav_order: 4
 ---
 
-- <i>“In each shave lies a philosophy.”</i> ― Somerset Maugham
-
 - <i>“To ask the right question is harder than to answer it.”</i> ― Georg Cantor
 
 - <i>“The days are long, but the years are short.”</i> ― Gretchen Rubin
@@ -15,8 +13,6 @@ nav_order: 4
 - <i>"The secret to doing good research[/work] is always to be a little underemployed. You waste years by not being able to waste hours.”</i> ― Amos Tversky
 
 - <i>"Ever tried. Ever failed. No matter. Try again. Fail again. Fail better."</i> ― Samuel Beckett <i>(The real motto of optimism)</i>
-
-- <i>"Dance first. Think later. It's the natural order" ― Samuel Beckett</i>
 
 - <i>“It follows that humans, people and knowledge are not only objectively significant: they are by far the most significant phenomena in nature – the only ones whose behaviour cannot be understood without understanding everything of fundamental importance.”</i> ― David Deutsch in his book The Beginning of Infinity
 
@@ -40,6 +36,6 @@ nav_order: 4
 
 - <i>"If you are so smart, then why aren't you happy?"</i> — Raj Raghunathan.
 
-- <i>"If I thought of a future, I dreamt of one day founding a school in which young people could learn without boredom, and would be stimulated to pose problems and discuss them; a school in which no unwanted answers to unasked questions would have to be listened to; in which one did not study for the sake of passing examinations."</i> -- I share Popper's dream and hope to creete it.
+- <i>"If I thought of a future, I dreamt of one day founding a school in which young people could learn without boredom, and would be stimulated to pose problems and discuss them; a school in which no unwanted answers to unasked questions would have to be listened to; in which one did not study for the sake of passing examinations."</i> -- Karl Popper.I share Popper's dream and hope to creete it.
 
 - <i>“Anyway, I keep picturing all these little kids playing some game in this big field of rye and all. Thousands of little kids, and nobody's around---nobody big, I mean---except me. And I'm standing on the edge of some crazy cliff. What I have to do, I have to catch everybody if they start to go over the cliff---I mean if they're running and they don't look where they're going I have to come out from somewhere and catch them. That's all I do all day. I'd just be the catcher in the rye and all. I know it's crazy, but that's the only thing I'd really like to be.”</i> ― J.D. Salinger, The Catcher in the Rye.
