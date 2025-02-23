@@ -8,8 +8,6 @@ nav_order: 4
 
 - <i>“To ask the right question is harder than to answer it.”</i> ― Georg Cantor
 
-- <i>“The days are long, but the years are short.”</i> ― Gretchen Rubin
-
 - <i>"The secret to doing good research[/work] is always to be a little underemployed. You waste years by not being able to waste hours.”</i> ― Amos Tversky
 
 - <i>"Ever tried. Ever failed. No matter. Try again. Fail again. Fail better."</i> ― Samuel Beckett <i>(The real motto of optimism)</i>
@@ -40,4 +38,4 @@ nav_order: 4
 
 - <i>“Anyway, I keep picturing all these little kids playing some game in this big field of rye and all. Thousands of little kids, and nobody's around---nobody big, I mean---except me. And I'm standing on the edge of some crazy cliff. What I have to do, I have to catch everybody if they start to go over the cliff---I mean if they're running and they don't look where they're going I have to come out from somewhere and catch them. That's all I do all day. I'd just be the catcher in the rye and all. I know it's crazy, but that's the only thing I'd really like to be.”</i> ― J.D. Salinger, The Catcher in the Rye.
 
-- <i>"The best revenge is to not be like your enemy."</i> ― Marcus Aurelius.
+- <i>"The difference between the amoeba and Einstein is that, although both make use of the method of trial and error elimination, the amoeba dislikes erring while Einstein is intrigued by it: he consciously searches for his errors in the hope of learning by their discovery and elimination. The method of science is the critical method."</i> ― Karl Popper.
