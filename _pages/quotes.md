@@ -28,17 +28,20 @@ nav_order: 4
 
 - <i>"It is important that students bring a certain ragamuffin, barefoot, irreverence to their studies; they are not here to worship what is known, but to question it."</i> ― Jacob Bronowski in The Ascent of Man
 
-- <i>"You cannot get educated by this self-propagating system in which people study to pass exams, and teach others to pass exams, but nobody knows anything. You learn something by doing it yourself, by asking questions, by thinking, and by experimenting."</i> — Richard P. Feynman.
+- <i>"You cannot get educated by this self-propagating system in which people study to pass exams, and teach others to pass exams, but nobody knows anything. You learn something by doing it yourself, by asking questions, by thinking, and by experimenting."</i> — Richard P. Feynman
 
-- <i>"The most important thing in life is to be free"</i> — Sourav Chatterjee in [this](https://youtu.be/YpaytTN1EgA?si=FabIFxAN0mzqfLbr) video.
+- <i>"The most important thing in life is to be free"</i> — Sourav Chatterjee in [this](https://youtu.be/YpaytTN1EgA?si=FabIFxAN0mzqfLbr) video
 
-- <i>"If you are so smart, then why aren't you happy?"</i> — Raj Raghunathan.
+- <i>"If you are so smart, then why aren't you happy?"</i> — Raj Raghunathan
 
-- <i>"If I thought of a future, I dreamt of one day founding a school in which young people could learn without boredom, and would be stimulated to pose problems and discuss them; a school in which no unwanted answers to unasked questions would have to be listened to; in which one did not study for the sake of passing examinations."</i> -- Karl Popper. I share Popper's dream.
+- <i>"If I thought of a future, I dreamt of one day founding a school in which young people could learn without boredom, and would be stimulated to pose problems and discuss them; a school in which no unwanted answers to unasked questions would have to be listened to; in which one did not study for the sake of passing examinations."</i> -- Karl Popper; I share Popper's dream
 
-- <i>“Anyway, I keep picturing all these little kids playing some game in this big field of rye and all. Thousands of little kids, and nobody's around---nobody big, I mean---except me. And I'm standing on the edge of some crazy cliff. What I have to do, I have to catch everybody if they start to go over the cliff---I mean if they're running and they don't look where they're going I have to come out from somewhere and catch them. That's all I do all day. I'd just be the catcher in the rye and all. I know it's crazy, but that's the only thing I'd really like to be.”</i> ― J.D. Salinger, The Catcher in the Rye.
+- <i>“Anyway, I keep picturing all these little kids playing some game in this big field of rye and all. Thousands of little kids, and nobody's around---nobody big, I mean---except me. And I'm standing on the edge of some crazy cliff. What I have to do, I have to catch everybody if they start to go over the cliff---I mean if they're running and they don't look where they're going I have to come out from somewhere and catch them. That's all I do all day. I'd just be the catcher in the rye and all. I know it's crazy, but that's the only thing I'd really like to be.”</i> ― J.D. Salinger, The Catcher in the Rye
 
-- <i>"The difference between the amoeba and Einstein is that, although both make use of the method of trial and error elimination, the amoeba dislikes erring while Einstein is intrigued by it: he consciously searches for his errors in the hope of learning by their discovery and elimination. The method of science is the critical method."</i> ― Karl Popper.
+- <i>"The difference between the amoeba and Einstein is that, although both make use of the method of trial and error elimination, the amoeba dislikes erring while Einstein is intrigued by it: he consciously searches for his errors in the hope of learning by their discovery and elimination. The method of science is the critical method."</i> ― Karl Popper
 
 - <i>"He who knows only his own side of the case knows little of that. His reasons may be good, and no one may have been able to refute them. But if he is equally unable to refute the reasons on the opposite side, if he does not so much as know what they are, he has no ground for preferring either opinion... Nor is it enough that he should hear the opinions of adversaries from his own teachers, presented as they state them, and accompanied by what they offer as refutations. He must be able to hear them from persons who actually believe them...he must know them in their most plausible and persuasive form."</i> ― John Stuart Mill
 
+- <i>“Anyone who expects to create, be it as a scientist or artist, scholar or writer, needs self-confidence, even bravado. How else can one dare to imagine understanding what no one else has understood, discovering what no one else has discovered? Where does this confidence come from? Fortunately, every young person is blessed with some of it. It is part of human character.”</i> ― John Archibald Wheeler
+
+- <i>You have to be bold enough to tackle a problem head on, but you have to be modest enough to expect that what appears to you as a solution is most likely just another mistake.</i> ― Karl Popper
