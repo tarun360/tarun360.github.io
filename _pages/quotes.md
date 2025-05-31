@@ -8,7 +8,9 @@ nav_order: 4
 
 - <i>“To ask the right question is harder than to answer it.”</i> ― Georg Cantor
 
-- <i>"The secret to doing good research is always to be a little underemployed. You waste years by not being able to waste hours.”</i> ― Amos Tversky
+- <i>“The secret to doing good research is always to be a little underemployed. You waste years by not being able to waste hours.”</i> ― Amos Tversky
+
+- <i>“Millions long for immortality who do not know what to do with themselves on a rainy Sunday afternoon.”</i> ― Susan Ertz
 
 - <i>"Ever tried. Ever failed. No matter. Try again. Fail again. Fail better."</i> ― Samuel Beckett <i>(The real motto of optimism)</i>
 
