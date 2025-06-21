@@ -14,13 +14,13 @@ nav_order: 4
 
 - <i>"Ever tried. Ever failed. No matter. Try again. Fail again. Fail better."</i> ― Samuel Beckett <i>(The real motto of optimism)</i>
 
+- <i>"An expert is someone who knows some of the worst mistakes that can be made in his subject, and how to avoid them.”</i> ― Werner Heisenberg
+
 - <i>“It follows that humans, people and knowledge are not only objectively significant: they are by far the most significant phenomena in nature – the only ones whose behaviour cannot be understood without understanding everything of fundamental importance.”</i> ― David Deutsch in his book The Beginning of Infinity
 
 - <i>"I think that there is only one way to science - or to philosophy, for that matter: to meet a problem, to see its beauty and fall in love with it; to get married to it and to live with it happily, till death do ye part - unless you should meet another and even more fascinating problem or unless, indeed, you should obtain a solution. But even if you do obtain a solution, you may then discover, to your delight, the existence of a whole family of enchanting, though perhaps difficult, problem children, for whose welfare you may work, with a purpose, to the end of your days."</i> ― Karl Popper
 
 - <i>"I believe that it would be worth trying to learn something about the world even if in trying to do so we should merely learn that we do not know much ... It might be well for all of us to remember that, while differing widely in the various little bits we know, in our infinite ignorance we are all equal."</i> ― Karl Popper in his book Conjectures and Refutations (1963) 
-
-- <i>"The mind is sharper and keener in seclusion and uninterrupted solitude. No big laboratory is needed in which to think. Originality thrives in seclusion free of outside influences beating upon us to cripple the creative mind. Be alone, that is the secret of invention; be alone, that is when ideas are born."</i> ― Nikola Tesla
 
 - <i>"From outside, if you have dispaired of getting into it [the inner ring], you call it “That gang” or “they” or “So-and-so and his set” or “The Caucus” or “The Inner Ring.” If you are a candidate for admission you probably don’t call it anything. To discuss it with the other outsiders would make you feel outside yourself. And to mention talking to the man who is inside, and who may help you if this present conversation goes well, would be madness."</i> ― C.S. Lewis in his essay "The Inner Ring"
 
@@ -51,3 +51,5 @@ nav_order: 4
 - <i>"But I have been most happy in finding new problems, in wrestling with them, and in making some progress. This, or so I feel, is the best life."</i> ― Karl Popper
 
 - <i>"If I am right in my conjecture that we grow, and become ourselves, only in interaction with world 3 [the world of objective knowledge], then the fact that we can all contribute to this world, if only a little, can give comfort to everyone; and especially to one who feels that in struggling with ideas he has found more happiness than he could ever deserve."</i> ― Karl Popper
+
+- <i>“What man of us has never felt, walking through the twilight or writing down a date from his past, that he has lost something infinite?”</i> ― Jorge Luis Borges
