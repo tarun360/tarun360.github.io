@@ -46,6 +46,8 @@ nav_order: 4
 
 - <i>“Anyone who expects to create, be it as a scientist or artist, scholar or writer, needs self-confidence, even bravado. How else can one dare to imagine understanding what no one else has understood, discovering what no one else has discovered? Where does this confidence come from? Fortunately, every young person is blessed with some of it. It is part of human character.”</i> ― John Archibald Wheeler
 
+- <i>“Knowledge only progresses by making mistakes as fast as possible”</i> ― John Archibald Wheeler
+
 - <i>"You have to be bold enough to tackle a problem head on, but you have to be modest enough to expect that what appears to you as a solution is most likely just another mistake."</i> ― Karl Popper
 
 - <i>"But I have been most happy in finding new problems, in wrestling with them, and in making some progress. This, or so I feel, is the best life."</i> ― Karl Popper
