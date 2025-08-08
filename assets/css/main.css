@@ -609,6 +609,27 @@ footer.sticky-bottom {
 .publications ol.bibliography li .badges span:hover {
   text-decoration: underline;
 }
+.publications ol.bibliography li .award-note {
+  margin-top: 0.5rem;
+}
+.publications ol.bibliography li .award-note .award-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  color: #333;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 2px solid #ffd700;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.publications ol.bibliography li .award-note .award-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
 .publications ol.bibliography li .hidden {
   font-size: 0.875rem;
   max-height: 0px;
