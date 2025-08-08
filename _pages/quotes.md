@@ -32,10 +32,6 @@ nav_order: 4
 
 - <i>"You cannot get educated by this self-propagating system in which people study to pass exams, and teach others to pass exams, but nobody knows anything. You learn something by doing it yourself, by asking questions, by thinking, and by experimenting."</i> — Richard P. Feynman
 
-- <i>"The most important thing in life is to be free"</i> — Sourav Chatterjee in [this](https://youtu.be/YpaytTN1EgA?si=FabIFxAN0mzqfLbr) video
-
-- <i>"If you are so smart, then why aren't you happy?"</i> — Raj Raghunathan
-
 - <i>"If I thought of a future, I dreamt of one day founding a school in which young people could learn without boredom, and would be stimulated to pose problems and discuss them; a school in which no unwanted answers to unasked questions would have to be listened to; in which one did not study for the sake of passing examinations."</i> -- Karl Popper; I share Popper's dream
 
 - <i>“Anyway, I keep picturing all these little kids playing some game in this big field of rye and all. Thousands of little kids, and nobody's around---nobody big, I mean---except me. And I'm standing on the edge of some crazy cliff. What I have to do, I have to catch everybody if they start to go over the cliff---I mean if they're running and they don't look where they're going I have to come out from somewhere and catch them. That's all I do all day. I'd just be the catcher in the rye and all. I know it's crazy, but that's the only thing I'd really like to be.”</i> ― J.D. Salinger, The Catcher in the Rye
@@ -53,5 +49,9 @@ nav_order: 4
 - <i>"But I have been most happy in finding new problems, in wrestling with them, and in making some progress. This, or so I feel, is the best life."</i> ― Karl Popper
 
 - <i>"If I am right in my conjecture that we grow, and become ourselves, only in interaction with world 3 [the world of objective knowledge], then the fact that we can all contribute to this world, if only a little, can give comfort to everyone; and especially to one who feels that in struggling with ideas he has found more happiness than he could ever deserve."</i> ― Karl Popper
+
+- <i>“Every intellectual has a very special responsibility. He has the privilege and the opportunity of studying. In return, he owes it to his fellow men (or ‘to society’) to represent the results of his study as simply, clearly and modestly as he can. The worst thing that intellectuals can do – the cardinal sin – is to try to set themselves up as great prophets vis-à-vis their fellow men and to impress them with puzzling philosophies. Anyone who cannot speak simply and clearly should say nothing and continue to work until he can do so.”</i> ― Karl Popper
+
+- <i>"If you think something is a barrier, and it's not a law of physics (which it never is), then it's not a barrier ― it's a problem. And all life is problem solving. Even if you can't solve it at the moment, it's much better psychologically to have a problem than a barrier."</i> ― David Deutsch
 
 - <i>“What man of us has never felt, walking through the twilight or writing down a date from his past, that he has lost something infinite?”</i> ― Jorge Luis Borges
