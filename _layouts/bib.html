@@ -129,9 +129,17 @@
         <div class="periodical">
           {{ periodical | strip }}
         </div>
-        <div class="periodical">
-          {{ entry.note | strip }}
-        </div>
+        {%- if entry.note -%}
+          {%- if entry.note contains "🏆" or entry.note contains "Award" or entry.note contains "award" -%}
+            <div class="periodical award-note">
+              <span class="award-badge">{{ entry.note | strip }}</span>
+            </div>
+          {%- else -%}
+            <div class="periodical">
+              {{ entry.note | strip }}
+            </div>
+          {%- endif -%}
+        {%- endif -%}
 
           <!-- Links/Buttons -->
           <div class="links">
