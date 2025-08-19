@@ -375,7 +375,7 @@ bootstrap:
     js: "sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8="
 fontawesome:
   version: "7.0.0"
-  integrity: "sha256-547a97285861331729b9b61ff718967428a88c46d8f4d7b14388e1f00c5bbdc3"
+  integrity: "sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
 jquery:
   version: "3.6.0"
   integrity: "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
