@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>project 2 | Tarun  Gupta</title>
+    <title>AI discovers "X" | Tarun  Gupta</title>
     <meta name="author" content="Tarun  Gupta">
-    <meta name="description" content="a project with a background image">
+    <meta name="description" content="AI discovers " x some help>
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -33,7 +33,7 @@
     <link rel="shortcut icon" href="/assets/img/tarun-icon.svg">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://tarun360.github.io/projects/2_project/">
+    <link rel="canonical" href="https://tarun360.github.io/blog/2025/ai-discovers-x/">
     
     <!-- Dark Mode -->
     
@@ -88,13 +88,13 @@
               
               
               <!-- Blog -->
-              <li class="nav-item ">
-                <a class="nav-link" href="/blog/">Blog</a>
+              <li class="nav-item active">
+                <a class="nav-link" href="/blog/">Blog<span class="sr-only">(current)</span></a>
 </li>
 
               <!-- Other pages --><!-- Blog (inserted after Publications) -->
-              <li class="nav-item ">
-                <a class="nav-link" href="/blog/">Blog</a>
+              <li class="nav-item active">
+                <a class="nav-link" href="/blog/">Blog<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="/publications/">Publications</a>
@@ -126,177 +126,58 @@
 
     <!-- Content -->
     <div class="container mt-5">
-      <!-- page.html -->
-        <div class="post">
+      <!-- _layouts/post.html -->
 
-          <header class="post-header">
-            <h1 class="post-title">project 2</h1>
-            <p class="post-description">a project with a background image</p>
-          </header>
+<div class="post">
 
-          <article>
-            <p>Every project has a beautiful feature showcase page.
-It’s easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.</p>
+  <header class="post-header">
+    <h1 class="post-title">AI discovers "X"</h1>
+    <p class="post-meta">October 1, 2025</p>
+    <p class="post-tags">
+      <a href="/blog/2025"> <i class="fas fa-calendar fa-sm"></i> 2025 </a>
+        ·  
+        <a href="/blog/tag/ai">
+          <i class="fas fa-hashtag fa-sm"></i> ai</a>  
+          <a href="/blog/tag/discovery">
+          <i class="fas fa-hashtag fa-sm"></i> discovery</a>  
+          <a href="/blog/tag/alphaevolve">
+          <i class="fas fa-hashtag fa-sm"></i> alphaevolve</a>  
+          
+        ·  
+        <a href="/blog/category/ai">
+          <i class="fas fa-tag fa-sm"></i> ai</a>  
+          
 
-<p>To give your project a background in the portfolio page, just add the img tag to the front matter like so:</p>
+    </p>
+  </header>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-layout: page
-title: project
-description: a project with a background image
-img: /assets/img/12.jpg
----
-</code></pre></div></div>
+  <article class="post-content">
+    <p>One thing I suspect is that claims about AI “discovering” new science or algorithms involve far more human agency than most researchers recognize.</p>
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
+<p>Take AlphaEvolve <sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> as an example. It is advertised as an AI system capable of making novel discoveries — for instance, finding a faster method to multiply 4×4 complex-valued matrices. This is presented as an autonomous breakthrough by AI. But in reality, the process depended heavily on human agency.</p>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/1-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/1-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/1-1400.webp"></source>
-    
+<p>AlphaEvolve was not simply told to invent a better algorithm for matrix multiplication. Instead, the problem was reformulated as a continuous optimization task, so that standard gradient-based methods like SGD or Adam could be applied. LLMs were then used to suggest hyperparameters (e.g., learning rate, weight decay), loss functions, and other heuristics. But this raises important questions that are often ignored: Why was this problem chosen? Why was it formulated in this particular way? The answer is that the authors drew on their understanding of LLMs and AlphaEvolve to identify problems where the system was most likely to succeed, and to frame those problems in a form it could handle. The paper even explicitly acknowledges that mathematicians (including Javier Gomez Serrano and Terence Tao) advised them on which problems to target and how best to formulate them:</p>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/1.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<p>“Most of these discoveries are on open problems suggested to us by external mathematicians Javier Gomez Serrano and Terence Tao, who also advised on how to best formulate them as inputs to AlphaEvolve.”</p>
 
-  </picture>
+<p>This invites comparison with earlier uses of computers in discovery. In 1976, Kenneth Appel and Wolfgang Haken used a computer to prove the four-colour conjecture — the result that any map can be coloured with only four colours such that no two adjacent regions share the same colour. Their program required hundreds of hours of computation, producing steps that no human could feasibly check in a lifetime. Yet the key to the proof was not an autonomous “discovery” by the computer. Rather, the human researchers played the key role by decomposing the problem into smaller pieces that a computer could handle, and then relying on brute-force computation.</p>
 
-</figure>
+<p>So in both cases — AlphaEvolve and the four-colour proof — the human role was not incidental but central. The systems only produced results after researchers exercised agency in choosing which problems to tackle, how to represent them, and how to guide the computational process. This leads to the key question: in current claims that “AI discovered X,” what exactly is the role of human agency, and how should we understand the division of credit between humans and machines?</p>
 
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
+<p>What could successful research to understand this more deeply look like? It is difficult to say. We would need a way to distinguish between dumb computation and creative computation — but that requires a definition of creativity, and at present I don’t see a clear path toward one. A more practical starting point might be to conduct case studies comparing modern AI-assisted discoveries (such as AlphaEvolve) with historical computational milestones (such as the four-colour conjecture). These studies could examine the extent to which creativity is attributed to computers rather than to human agency, and then present these insights to the research community to spark wider discussion about the division of roles in such discoveries.</p>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/3-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/3-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/3-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/3.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/5-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/5-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/5-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/5.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/5-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/5-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/5-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/5.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Novikov, Alexander, et al. “AlphaEvolve: A coding agent for scientific and algorithmic discovery.” arXiv preprint arXiv:2506.13131 (2025). <a href="https://arxiv.org/abs/2506.13131" rel="external nofollow noopener" target="_blank">arXiv:2506.13131</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
 </div>
 
-<p>You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, <em>bled</em> for your project, and then… you reveal its glory in the next row of images.</p>
+  </article>
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        <figure>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/6-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/6-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/6-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/6.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        <figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/11-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/11-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/11-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/11.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
 </div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-<p>The code is simple.
-Just wrap your images with <code class="language-plaintext highlighter-rouge">&lt;div class="col-sm"&gt;</code> and place them inside <code class="language-plaintext highlighter-rouge">&lt;div class="row"&gt;</code> (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/" rel="external nofollow noopener" target="_blank">Bootstrap Grid</a> system).
-To make images responsive, add <code class="language-plaintext highlighter-rouge">img-fluid</code> class to each; for rounded corners and shadows use <code class="language-plaintext highlighter-rouge">rounded</code> and <code class="language-plaintext highlighter-rouge">z-depth-1</code> classes.
-Here’s the code for the last row of images above:</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-sm-center"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8 mt-3 mt-md-0"</span><span class="nt">&gt;</span>
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-4 mt-3 mt-md-0"</span><span class="nt">&gt;</span>
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div></div>
-
-
-          </article>
-
-        </div>
 
     </div>
 
