@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AI discovers "X" | Tarun  Gupta</title>
+    <title>Voting and the Scale-Free Theory of Intelligence | Tarun  Gupta</title>
     <meta name="author" content="Tarun  Gupta">
-    <meta name="description" content="AI discovers new science (with some help)">
+    <meta name="description" content="Arrow’s theorem, Popper, and the strange idea that your neurons might be voting too.">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -33,7 +33,7 @@
     <link rel="shortcut icon" href="/assets/img/tarun-icon.svg">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://tarun360.github.io/blog/2025/ai-discovers-x/">
+    <link rel="canonical" href="https://tarun360.github.io/blog/2025/arrow-impossibility/">
     
     <!-- Dark Mode -->
     
@@ -130,41 +130,63 @@
 <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">AI discovers "X"</h1>
+    <h1 class="post-title">Voting and the Scale-Free Theory of Intelligence</h1>
     <p class="post-meta">October 1, 2025</p>
     <p class="post-tags">
       <a href="/blog/2025"> <i class="fas fa-calendar fa-sm"></i> 2025 </a>
         ·  
-        <a href="/blog/tag/ai">
-          <i class="fas fa-hashtag fa-sm"></i> ai</a>  
-          <a href="/blog/tag/automated-science">
-          <i class="fas fa-hashtag fa-sm"></i> automated-science</a>  
-          <a href="/blog/tag/alphaevolve">
-          <i class="fas fa-hashtag fa-sm"></i> alphaevolve</a>  
+        <a href="/blog/tag/democracy">
+          <i class="fas fa-hashtag fa-sm"></i> democracy</a>  
+          <a href="/blog/tag/voting">
+          <i class="fas fa-hashtag fa-sm"></i> voting</a>  
+          <a href="/blog/tag/intelligence">
+          <i class="fas fa-hashtag fa-sm"></i> intelligence</a>  
+          <a href="/blog/tag/scale-free">
+          <i class="fas fa-hashtag fa-sm"></i> scale-free</a>  
+          <a href="/blog/tag/arrow">
+          <i class="fas fa-hashtag fa-sm"></i> arrow</a>  
           
 
     </p>
   </header>
 
   <article class="post-content">
-    <p>One thing I suspect is that claims about AI “discovering” new science or algorithms involve far more human agency than most researchers recognize.</p>
+    <p>Arrow’s impossibility theorem <sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> (and its stronger forms <sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>) shows that no ranked voting system can satisfy all of Kenneth Arrow’s five axioms for rational collective choice. At first glance, this seems to deny the very possibility of rational group decision-making, and some even misinterpret the theorem as suggesting that democracy itself is impossible <sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>.</p>
 
-<p>Take AlphaEvolve <sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> as an example. It is advertised as an AI system capable of making novel discoveries — for instance, finding a faster method to multiply 4×4 complex-valued matrices. This is presented as an autonomous breakthrough by AI. But in reality, the process depended heavily on human agency.</p>
+<p>I discuss below some important insights from Arrow’s theorem. These are mostly drawn from <sup id="fnref:4"><a href="#fn:4" class="footnote" rel="footnote" role="doc-noteref">4</a></sup> and [^5,^6], not my own novel contributions. I then consider how these insights connect to the idea of a scale-free theory of intelligence — the conjecture that fundamental principles may govern both individual minds and large-scale systems like societies <sup id="fnref:9"><a href="#fn:9" class="footnote" rel="footnote" role="doc-noteref">5</a></sup>.</p>
 
-<p>AlphaEvolve was not simply told to invent a better algorithm for matrix multiplication. Instead, the problem was reformulated as a continuous optimization task, so that standard gradient-based methods like SGD or Adam could be applied. LLMs were then used to suggest hyperparameters (e.g., learning rate, weight decay), loss functions, and other heuristics. But this raises important questions that are often ignored: Why was this problem chosen? Why was it formulated in this particular way? The answer is that the authors drew on their understanding of LLMs and AlphaEvolve to identify problems where the system was most likely to succeed, and to frame those problems in a form it could handle. The paper even explicitly acknowledges that mathematicians (including Javier Gomez Serrano and Terence Tao) advised them on which problems to target and how best to formulate them:</p>
+<p>Arrow’s theorem overlooks the most important part of rational group decision-making. In social choice theory, a “decision” is defined as choosing among fixed options, based on fixed and consistent preferences. However, the preferences are not fixed! Before one decides who to vote for, one has to consider which policies of different parties appeal to them most and how it matches with their own political ideology. The political parties themselves constantly tinker their manifestos and messaging based on ground feedback, which often leads to changes in voter preferences. Hence, at the heart of decision making is communication between parties and voters, which leads to the creation of new ideas and modification of existing ones. Only at the end of this process does one select their preferred candidates, and the relevance of Arrow’s theorem comes into picture.</p>
 
-<blockquote>
-  <p>“Most of these discoveries are on open problems suggested to us by external mathematicians Javier Gomez Serrano and Terence Tao, who also advised on how to best formulate them as inputs to AlphaEvolve.”</p>
-</blockquote>
+<p>In other words, social choice theory is based on false assumptions about what “deciding” consists of. It is mistaking an abstract process that it has named decision-making for the real-life process of the same name. The fact that Arrow’s axioms lead to logical inconsistency means that Arrow’s conception of rational decision-making is itself irrational, and not that rational decision-making isn’t possible <sup id="fnref:4:1"><a href="#fn:4" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>.</p>
 
-<p>This invites comparison with earlier uses of computers in discovery. In 1976, Kenneth Appel and Wolfgang Haken used a computer to prove the four-colour conjecture — the result that any map can be coloured with only four colours such that no two adjacent regions share the same colour. Their program required hundreds of hours of computation, producing steps that no human could feasibly check in a lifetime. Yet the key to the proof was not an autonomous “discovery” by the computer. Rather, the human researchers played the key role by decomposing the problem into smaller pieces that a computer could handle, and then relying on brute-force computation.</p>
+<p>So what does rational group decision-making actually require? As Popper argued [^5,^6], the right criterion to judge a political system is whether it allows the removal of bad policies and bad governments without violence or bloodshed. Unlike Arrow’s axioms, this presents a practical, technical challenge. Modern democracies provide working solutions to this challenge, with elections being just one of the institutions involved.</p>
 
-<p>So in both cases — AlphaEvolve and the four-colour proof — the human role was not incidental but central. The systems only produced results after researchers exercised agency in choosing which problems to tackle, how to represent them, and how to guide the computational process. This leads to the key question: in current claims that “AI discovered X,” what exactly is the role of human agency, and how should we understand the division of credit between humans and machines?</p>
+<p>Now, if we conjecture that there exists a scale-free theory of intelligence — fundamental principles which simultaneously govern the designs of well-functioning minds and societies <sup id="fnref:9:1"><a href="#fn:9" class="footnote" rel="footnote" role="doc-noteref">5</a></sup> — then insights at one scale should appear at another. For example, voting is central to democratic systems (the only political system that works, as Churchill noted). Interestingly, according to the “thousand brains theory” of intelligence, cortical columns in the brain may also use voting mechanisms <sup id="fnref:7"><a href="#fn:7" class="footnote" rel="footnote" role="doc-noteref">6</a></sup>. This perspective opens up exciting research directions. For example, in practice, the first-past-the-post system (used in the UK) tends to work much better than proportional representation (used in Germany) <sup id="fnref:2:1"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>. Should we then expect brains to use first-past-the-post voting as well? Or, if we discover a different voting mechanism in the brain, might that suggest improvements for human voting systems? (A similar example is given in <sup id="fnref:8"><a href="#fn:8" class="footnote" rel="footnote" role="doc-noteref">7</a></sup>, where researchers developed a more efficient distributed bipartite matching algorithm by studying neuromuscular circuits.) This also raises many other interesting questions: for example, if voting does occur in biological systems (as hypothesised in the thousand brains theory <sup id="fnref:7:1"><a href="#fn:7" class="footnote" rel="footnote" role="doc-noteref">6</a></sup>), then what is the analogue of the violence or bloodshed that arises from failures of collective decision-making in human societies? If a scale-free theory of intelligence does exist, then we should expect such an analogue to exist as well.</p>
+
+<p>Finally, if we conjecture that Popper’s view of democracy [^5,^6] — rather than Arrow’s conception — better captures rational group decision-making, then we might ask: can we find parallels of Popper’s model in biological systems of voting as well? Exploring such biological analogues could provide falsifiable predictions for a scale-free theory of intelligence.</p>
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:1">
-      <p>Novikov, Alexander, et al. “AlphaEvolve: A coding agent for scientific and algorithmic discovery.” arXiv preprint arXiv:2506.13131 (2025). <a href="https://arxiv.org/abs/2506.13131" rel="external nofollow noopener" target="_blank">arXiv:2506.13131</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p><a href="https://en.wikipedia.org/wiki/Arrow%27s_impossibility_theorem" rel="external nofollow noopener" target="_blank">Arrow’s impossibility theorem (Wikipedia)</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:2">
+      <p><a href="https://politics.stackexchange.com/questions/14015/does-gibbard-satterthwaite-theorem-apply-to-all-voting-systems/14120" rel="external nofollow noopener" target="_blank">Politics StackExchange: Does Gibbard–Satterthwaite theorem apply to all voting systems?</a> <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:2:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a></p>
+    </li>
+    <li id="fn:3">
+      <p><a href="https://youtu.be/qf7ws2DF-zk?si=o5pdJ1mW3h7MaLWY" rel="external nofollow noopener" target="_blank">Veritasium: Why Democracy Is Mathematically Impossible</a> <a href="#fnref:3" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:4">
+      <p>David Deutsch, <em>The Beginning of Infinity</em>, chapter 13 “Choices” <a href="#fnref:4" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:4:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a></p>
+    </li>
+    <li id="fn:9">
+      <p><a href="https://www.mindthefuture.info/p/towards-a-scale-free-theory-of-intelligent" rel="external nofollow noopener" target="_blank">Towards a Scale-Free Theory of Intelligent Action</a> <a href="#fnref:9" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:9:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a></p>
+    </li>
+    <li id="fn:7">
+      <p><a href="https://www.numenta.com/blog/2019/01/16/the-thousand-brains-theory-of-intelligence/" rel="external nofollow noopener" target="_blank">Numenta: The Thousand Brains Theory of Intelligence</a> <a href="#fnref:7" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:7:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a></p>
+    </li>
+    <li id="fn:8">
+      <p>S. Dasgupta, Y. Meirovitch, X. Zheng, I. Bush, J.W. Lichtman and S. Navlakha. <em>A neural algorithm for computing bipartite matchings</em>. PNAS, 121(37), 2024. <a href="#fnref:8" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>
@@ -185,7 +207,7 @@
   
 
   <li class="my-2">
-    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2025/arrow-impossibility/">Voting and the Scale-Free Theory of Intelligence</a>
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2025/ai-discovers-x/">AI discovers "X"</a>
   </li>
 
 </div>
