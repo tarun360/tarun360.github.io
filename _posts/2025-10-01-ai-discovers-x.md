@@ -3,7 +3,6 @@ layout: post
 title: 'AI discovers "X"'
 description: 'AI discovers new science (with some help)'
 tags: [ai, automated-science, alphaevolve]
-# categories: [ai]
 ---
 
 One thing I suspect is that claims about AI “discovering” new science or algorithms involve far more human agency than most researchers recognize.
