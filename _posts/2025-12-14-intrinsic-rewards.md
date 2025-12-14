@@ -11,7 +11,7 @@ The following is the classic figure from *Reinforcement Learning* by Sutton & Ba
 
 {% include figure.html path="assets/img/sutton-barto-rl-figure.png" title="RL Agent-Environment Interaction" caption="The classic RL agent-environment interaction diagram from Sutton & Barto." class="img-fluid rounded z-depth-1" %}
 
-At each time step \($t$\), the agent takes an action \($$ A_t $$\) in the environment, leading the environment to transition to a new state \($$ S_{t+1} $$\). The environment then emits a scalar reward \($$ R_{t+1} $$\), which the agent receives as given. The agent’s objective is to choose actions over time so as to maximize the cumulative reward it receives in the long run.
+At each time step \($$ t $$\), the agent takes an action \($$ A_t $$\) in the environment, leading the environment to transition to a new state \($$ S_{t+1} $$\). The environment then emits a scalar reward \($$ R_{t+1} $$\), which the agent receives as given. The agent’s objective is to choose actions over time so as to maximize the cumulative reward it receives in the long run.
 
 The main point of contention is this: **should rewards be modeled as part of the environment or as part of the agent?**
 
