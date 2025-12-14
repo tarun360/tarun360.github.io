@@ -11,9 +11,11 @@ The following is the classic figure from *Reinforcement Learning* by Sutton & Ba
 
 {% include figure.html path="assets/img/sutton-barto-rl-figure.png" title="RL Agent-Environment Interaction" caption="The classic RL agent-environment interaction diagram from Sutton & Barto." class="img-fluid rounded z-depth-1" %}
 
-The main point of contention is this: *should rewards be modeled as part of the environment or as part of the agent?*
+At each time step \($t$\), the agent takes an action \($A_t$\) in the environment, leading the environment to transition to a new state \($S_{t+1}$\). The environment then emits a scalar reward \($R_{t+1}$\), which the agent receives as given. The agent’s objective is to choose actions over time so as to maximize the cumulative reward it receives in the long run.
 
-In the real world, no animate being has direct access to the environment—everything is inferred. The brain receives spikes, or action potentials, at its synapses from other neurons, and from these it infers what is “out there.” For example, photons exist; color does not. Color is an inferred quantity, constructed by the brain from incoming sensory data. Likewise, rewards (and, frankly, anything else) must be inferred by the agent [^2]. (See Tolman’s classic maze experiments in [^2] for an empirical illustration.) In other words, rewards should be modeled as part of the agent rather than the environment. This insight is also known in philosophy as the *theory-ladenness of observation* [^3].
+The main point of contention is this: **should rewards be modeled as part of the environment or as part of the agent?**
+
+In the real world, no animate being has direct access to the environment—everything is inferred. The brain receives spikes, or action potentials, at its synapses from other neurons, and from these it infers what is “out there.” For example, photons exist; color does not. Color is an inferred quantity, constructed by the brain from incoming sensory data. Likewise, rewards (and, frankly, anything else) must be inferred by the agent [^2]. In other words, rewards should be modeled as part of the agent rather than the environment. This insight is also known in philosophy as the *theory-ladenness of observation* [^3].
 
 This view goes directly against the basic building blocks of RL as described in *Reinforcement Learning* book:
 
@@ -31,10 +33,12 @@ In both cases, human scientists are driven by a quest for *explanatory understan
 
 *(Thanks to [Hadi Vafaii](https://x.com/hadivafaii) and [Rosa Cao](https://philosophy.stanford.edu/people/rosa-cao) for discussions related to this.)*
 
-## References
+---
 
-[^1]: https://gist.github.com/yoavg/3eb3e722d38e887a0a8ac151c62d9617  
-[^2]: https://sensorimotorai.github.io/debates/  
-[^3]: https://en.wikipedia.org/wiki/Theory-ladenness  
+### References
+
+[^1]: [Computer-science Reinforcement Learning got Rewards Wrong](https://gist.github.com/yoavg/3eb3e722d38e887a0a8ac151c62d9617)  
+[^2]: [RL Debate Series by Sensorimotor AI Journal Club](https://sensorimotorai.github.io/debates/)  
+[^3]: [Theory-ladenness](https://en.wikipedia.org/wiki/Theory-ladenness)
 [^4]: Burda, Yuri, et al. “Large-scale study of curiosity-driven learning.” arXiv preprint arXiv:1808.04355 (2018).  
-[^5]: https://www.youtube.com/watch?v=gEbbGyNkR2U  
+[^5]: [Rich Sutton, The OaK Architecture: A Vision of SuperIntelligence from Experience - RLC 2025](https://www.youtube.com/watch?v=gEbbGyNkR2U)
