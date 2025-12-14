@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Voting and the Scale-Free Theory of Intelligence | Tarun  Gupta</title>
+    <title>Can Intrinsic Rewards Save RL? | Tarun  Gupta</title>
     <meta name="author" content="Tarun  Gupta">
-    <meta name="description" content="Arrow’s theorem, Popper, and the strange idea that your neurons might be voting too.">
+    <meta name="description" content="I argue that prevailing surprise-based conceptions of intrinsic reward fail to explain human curiosity and explanatory understanding.">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -33,7 +33,7 @@
     <link rel="shortcut icon" href="/assets/img/tarun-icon.svg">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://tarun360.github.io/blog/2025/arrow-impossibility/">
+    <link rel="canonical" href="https://tarun360.github.io/blog/2025/intrinsic-rewards/">
     
     <!-- Dark Mode -->
     
@@ -130,71 +130,87 @@
 <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Voting and the Scale-Free Theory of Intelligence</h1>
-    <p class="post-meta">October 1, 2025</p>
+    <h1 class="post-title">Can Intrinsic Rewards Save RL?</h1>
+    <p class="post-meta">December 14, 2025</p>
     <p class="post-tags">
       <a href="/blog/2025"> <i class="fas fa-calendar fa-sm"></i> 2025 </a>
         ·  
-        <a href="/blog/tag/democracy">
-          <i class="fas fa-hashtag fa-sm"></i> democracy</a>  
-          <a href="/blog/tag/voting">
-          <i class="fas fa-hashtag fa-sm"></i> voting</a>  
-          <a href="/blog/tag/intelligence">
-          <i class="fas fa-hashtag fa-sm"></i> intelligence</a>  
-          <a href="/blog/tag/scale-free">
-          <i class="fas fa-hashtag fa-sm"></i> scale-free</a>  
-          <a href="/blog/tag/arrow">
-          <i class="fas fa-hashtag fa-sm"></i> arrow</a>  
+        <a href="/blog/tag/reinforcement-learning">
+          <i class="fas fa-hashtag fa-sm"></i> reinforcement-learning</a>  
+          <a href="/blog/tag/intrinsic-motivation">
+          <i class="fas fa-hashtag fa-sm"></i> intrinsic-motivation</a>  
+          <a href="/blog/tag/curiosity">
+          <i class="fas fa-hashtag fa-sm"></i> curiosity</a>  
+          <a href="/blog/tag/philosophy-of-ai">
+          <i class="fas fa-hashtag fa-sm"></i> philosophy-of-ai</a>  
+          <a href="/blog/tag/cognition">
+          <i class="fas fa-hashtag fa-sm"></i> cognition</a>  
           
 
     </p>
   </header>
 
   <article class="post-content">
-    <p>Arrow’s impossibility theorem <sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> (and its stronger forms <sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>) shows that no ranked voting system can satisfy all of Kenneth Arrow’s five axioms for rational collective choice. At first glance, this seems to deny the very possibility of rational group decision-making, and some even misinterpret the theorem as suggesting that democracy itself is impossible <sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>.</p>
+    <p>I have always been uneasy with how reinforcement learning models reward as part of the environment, but I felt somewhat unqualified to question it. I was recently glad to find like-minded friends on X (<a href="https://u.cs.biu.ac.il/~yogo/" rel="external nofollow noopener" target="_blank">Yoav Goldberg</a> and <a href="https://x.com/hadivafaii" rel="external nofollow noopener" target="_blank">Hadi Vafaii</a>) who shared my view and articulated it far better than I had in my own mind <sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> <sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>. I first summarize the argument, and then argue that a convenient patch often used to address this concern—<em>intrinsic rewards</em>, as they are commonly formulated in terms of sensory surprise or prediction error—is inadequate to explain curiosity in humans.</p>
 
-<p>I discuss below some important insights from Arrow’s theorem. These are mostly drawn from <sup id="fnref:4"><a href="#fn:4" class="footnote" rel="footnote" role="doc-noteref">4</a></sup> and <sup id="fnref:5"><a href="#fn:5" class="footnote" rel="footnote" role="doc-noteref">5</a></sup> <sup id="fnref:6"><a href="#fn:6" class="footnote" rel="footnote" role="doc-noteref">6</a></sup>, not my own novel contributions. I then consider how these insights connect to the idea of a scale-free theory of intelligence — the conjecture that fundamental principles may govern both individual minds and large-scale systems like societies <sup id="fnref:9"><a href="#fn:9" class="footnote" rel="footnote" role="doc-noteref">7</a></sup>.</p>
+<p>The following is the classic figure from <em>Reinforcement Learning</em> by Sutton &amp; Barto:</p>
 
-<p>Arrow’s theorem overlooks the most important part of rational group decision-making. In social choice theory, a “decision” is defined as choosing among fixed options, based on fixed and consistent preferences. However, the preferences are not fixed! Before one decides who to vote for, one has to consider which policies of different parties appeal to them most and how it matches with their own political ideology. The political parties themselves constantly tinker their manifestos and messaging based on ground feedback, which often leads to changes in voter preferences. Hence, at the heart of decision making is communication between parties and voters, which leads to the creation of new ideas and modification of existing ones. Only at the end of this process does one select their preferred candidates, and the relevance of Arrow’s theorem comes into picture.</p>
+<figure>
 
-<p>In other words, social choice theory is based on false assumptions about what “deciding” consists of. It is mistaking an abstract process that it has named decision-making for the real-life process of the same name. The fact that Arrow’s axioms lead to logical inconsistency means that Arrow’s conception of rational decision-making is itself irrational, and not that rational decision-making isn’t possible <sup id="fnref:4:1"><a href="#fn:4" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>.</p>
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/sutton-barto-rl-figure-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/sutton-barto-rl-figure-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/sutton-barto-rl-figure-1400.webp"></source>
+    
 
-<p>So what does rational group decision-making actually require? As Popper argued <sup id="fnref:5:1"><a href="#fn:5" class="footnote" rel="footnote" role="doc-noteref">5</a></sup> <sup id="fnref:6:1"><a href="#fn:6" class="footnote" rel="footnote" role="doc-noteref">6</a></sup>, the right criterion to judge a political system is whether it allows the removal of bad policies and bad governments without violence or bloodshed. Unlike Arrow’s axioms, this presents a practical, technical challenge. Modern democracies provide working solutions to this challenge, with elections being just one of the institutions involved.</p>
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/sutton-barto-rl-figure.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="RL Agent-Environment Interaction" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
-<p>Now, if we conjecture that there exists a scale-free theory of intelligence — fundamental principles which simultaneously govern the designs of well-functioning minds and societies <sup id="fnref:9:1"><a href="#fn:9" class="footnote" rel="footnote" role="doc-noteref">7</a></sup> — then insights at one scale should appear at another. For example, voting is central to democratic systems (the only political system that works, as Churchill noted). Interestingly, according to the “thousand brains theory” of intelligence, cortical columns in the brain may also use voting mechanisms <sup id="fnref:7"><a href="#fn:7" class="footnote" rel="footnote" role="doc-noteref">8</a></sup>. This perspective opens up exciting research directions. For example, in practice, the first-past-the-post system (used in the UK) tends to work much better than proportional representation (used in Germany) <sup id="fnref:2:1"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>. Should we then expect brains to use first-past-the-post voting as well? Or, if we discover a different voting mechanism in the brain, might that suggest improvements for human voting systems? (A similar example is given in <sup id="fnref:8"><a href="#fn:8" class="footnote" rel="footnote" role="doc-noteref">9</a></sup>, where researchers developed a more efficient distributed bipartite matching algorithm by studying neuromuscular circuits.) This also raises many other interesting questions: for example, if voting does occur in biological systems (as hypothesised in the thousand brains theory <sup id="fnref:7:1"><a href="#fn:7" class="footnote" rel="footnote" role="doc-noteref">8</a></sup>), then what is the analogue of the violence or bloodshed that arises from failures of collective decision-making in human societies? If a scale-free theory of intelligence does exist, then we should expect such an analogue to exist as well.</p>
+  </picture><figcaption class="caption">The classic RL agent-environment interaction diagram from Sutton &amp; Barto.</figcaption>
 
-<p>Finally, if we conjecture that Popper’s view of democracy <sup id="fnref:5:2"><a href="#fn:5" class="footnote" rel="footnote" role="doc-noteref">5</a></sup> <sup id="fnref:6:2"><a href="#fn:6" class="footnote" rel="footnote" role="doc-noteref">6</a></sup> — rather than Arrow’s conception — better captures rational group decision-making, then we might ask: can we find parallels of Popper’s model in biological systems of voting as well? Exploring such biological analogues could provide falsifiable predictions for a scale-free theory of intelligence.</p>
+</figure>
+
+<p>The main point of contention is this: <em>should rewards be modeled as part of the environment or as part of the agent?</em></p>
+
+<p>In the real world, no animate being has direct access to the environment—everything is inferred. The brain receives spikes, or action potentials, at its synapses from other neurons, and from these it infers what is “out there.” For example, photons exist; color does not. Color is an inferred quantity, constructed by the brain from incoming sensory data. Likewise, rewards (and, frankly, anything else) must be inferred by the agent <sup id="fnref:2:1"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>. (See Tolman’s classic maze experiments in <sup id="fnref:2:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> for an empirical illustration.) In other words, rewards should be modeled as part of the agent rather than the environment. This insight is also known in philosophy as the <em>theory-ladenness of observation</em> <sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>.</p>
+
+<p>This view goes directly against the basic building blocks of RL as described in <em>Reinforcement Learning</em> book:</p>
+
+<blockquote>
+  <p>“We always consider the reward computation to be external to the agent because it defines the task facing the agent and thus must be beyond its ability to change arbitrarily.”</p>
+</blockquote>
+
+<p>At this point, a common and convenient patch is <em>intrinsic rewards</em>—curiosity, surprise, or other domain-agnostic intrinsic signals. Now, notwithstanding that if reward is truly intrinsic to the agent then it already breaks the fundamental assumption of RL that reward must come from the environment <sup id="fnref:2:3"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>, I argue that the prevailing conception of intrinsic motivation itself is inadequate to explain human curiosity.</p>
+
+<p>The most common formulation of intrinsic reward in RL is based on sensory surprise, prediction error, or closely related notions <sup id="fnref:4"><a href="#fn:4" class="footnote" rel="footnote" role="doc-noteref">4</a></sup>. The core idea is that the agent seeks sensory novelty in the environment and explores it. For example, a human infant might experience sensory surprise upon noticing a new toy, a bright light from a novel source, or an unfamiliar rattling sound, and would be motivated to explore it. Rich Sutton, in his recent talks on the OaK architecture at RLC’25 <sup id="fnref:5"><a href="#fn:5" class="footnote" rel="footnote" role="doc-noteref">5</a></sup> and NeurIPS’25, also alludes to this idea of creating an option upon the occurrence of an intrinsically rewarding event, using similar examples of infants noticing new toys or sounds.</p>
+
+<p>However, I believe such forms of intrinsic motivation—based on surprise or predictability—are almost the opposite of the curiosity observed in humans. Humans are often curious about the most mundane and omnipresent phenomena, such as the night sky filled with stars, which has motivated scientific curiosity for millennia. From the perspective of surprise or prediction error, the night sky is among the least surprising and most predictable features of the environment. An agent driven by prevailing notions of intrinsic motivation, if dropped into the real world, would be least curious about it.</p>
+
+<p>As another example (courtesy of <a href="https://philosophy.stanford.edu/people/rosa-cao" rel="external nofollow noopener" target="_blank">Rosa Cao</a>), imagine a miracle: a stone that endlessly produces a constant, fixed-trajectory stream of blood. After observing it for a day or two, the phenomenon becomes perfectly predictable and generates no sensory surprise. An agent driven by prevailing conception of intrinsic motivation would therefore have no reason to further explore it. A human scientist, in contrast, would find this event increasingly perplexing with each passing day and might devote an entire lifetime to explaining it—just as scientists have done, and continue to do, with the night sky.</p>
+
+<p>In both cases, human scientists are driven by a quest for <em>explanatory understanding</em> rather than mere predictability. Prevailing conceptions of intrinsic motivation do not naturally give rise to a drive for explanatory understanding, which is arguably the hallmark of human curiosity. Of course, one could imagine alternative intrinsic motivation functions that do lead to a quest for explanatory understanding; what I want to highlight here is the distinction between two very different kinds of curiosity—one based on sensory surprise, commonly observed in animals and human infants, and another based on the pursuit of explanatory understanding, characteristic of human scientific inquiry.</p>
+
+<p><em>(Thanks to <a href="https://x.com/hadivafaii" rel="external nofollow noopener" target="_blank">Hadi Vafaii</a> and <a href="https://philosophy.stanford.edu/people/rosa-cao" rel="external nofollow noopener" target="_blank">Rosa Cao</a> for discussions related to this.)</em></p>
 
 <h2 id="references">References</h2>
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:1">
-      <p><a href="https://en.wikipedia.org/wiki/Arrow%27s_impossibility_theorem" rel="external nofollow noopener" target="_blank">Arrow’s impossibility theorem (Wikipedia)</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>https://gist.github.com/yoavg/3eb3e722d38e887a0a8ac151c62d9617 <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:2">
-      <p><a href="https://politics.stackexchange.com/questions/14015/does-gibbard-satterthwaite-theorem-apply-to-all-voting-systems/14120" rel="external nofollow noopener" target="_blank">Politics StackExchange: Does Gibbard–Satterthwaite theorem apply to all voting systems?</a> <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:2:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a></p>
+      <p>https://sensorimotorai.github.io/debates/ <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:2:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a> <a href="#fnref:2:2" class="reversefootnote" role="doc-backlink">↩<sup>3</sup></a> <a href="#fnref:2:3" class="reversefootnote" role="doc-backlink">↩<sup>4</sup></a></p>
     </li>
     <li id="fn:3">
-      <p><a href="https://youtu.be/qf7ws2DF-zk?si=o5pdJ1mW3h7MaLWY" rel="external nofollow noopener" target="_blank">Veritasium: Why Democracy Is Mathematically Impossible</a> <a href="#fnref:3" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>https://en.wikipedia.org/wiki/Theory-ladenness <a href="#fnref:3" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:4">
-      <p>David Deutsch, <em>The Beginning of Infinity</em>, chapter 13 “Choices” <a href="#fnref:4" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:4:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a></p>
+      <p>Burda, Yuri, et al. “Large-scale study of curiosity-driven learning.” arXiv preprint arXiv:1808.04355 (2018). <a href="#fnref:4" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:5">
-      <p><a href="https://www.economist.com/democracy-in-america/2016/01/31/from-the-archives-the-open-society-and-its-enemies-revisited" rel="external nofollow noopener" target="_blank">Economist: The Open Society and Its Enemies revisited</a> <a href="#fnref:5" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:5:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a> <a href="#fnref:5:2" class="reversefootnote" role="doc-backlink">↩<sup>3</sup></a></p>
-    </li>
-    <li id="fn:6">
-      <p>Karl Popper, <em>The Open Society and Its Enemies</em> <a href="#fnref:6" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:6:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a> <a href="#fnref:6:2" class="reversefootnote" role="doc-backlink">↩<sup>3</sup></a></p>
-    </li>
-    <li id="fn:9">
-      <p><a href="https://www.mindthefuture.info/p/towards-a-scale-free-theory-of-intelligent" rel="external nofollow noopener" target="_blank">Towards a Scale-Free Theory of Intelligent Action</a> <a href="#fnref:9" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:9:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a></p>
-    </li>
-    <li id="fn:7">
-      <p><a href="https://www.numenta.com/blog/2019/01/16/the-thousand-brains-theory-of-intelligence/" rel="external nofollow noopener" target="_blank">Numenta: The Thousand Brains Theory of Intelligence</a> <a href="#fnref:7" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:7:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a></p>
-    </li>
-    <li id="fn:8">
-      <p>S. Dasgupta, Y. Meirovitch, X. Zheng, I. Bush, J.W. Lichtman and S. Navlakha. <em>A neural algorithm for computing bipartite matchings</em>. PNAS, 121(37), 2024. <a href="#fnref:8" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>https://www.youtube.com/watch?v=gEbbGyNkR2U <a href="#fnref:5" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>
@@ -215,7 +231,7 @@
   
 
   <li class="my-2">
-    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2025/intrinsic-rewards/">Can Intrinsic Rewards Save RL?</a>
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2025/arrow-impossibility/">Voting and the Scale-Free Theory of Intelligence</a>
   </li>
 
   
