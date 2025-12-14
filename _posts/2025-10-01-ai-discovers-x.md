@@ -17,6 +17,8 @@ This invites comparison with earlier uses of computers in discovery. In 1976, Ke
 
 So in both the cases (AlphaEvolve and the four-colour proof) the human role was central. The systems only produced results after researchers exercised agency in choosing which problems to tackle, how to represent them, and how to guide the computational process. Hence, computer-aided discovery is not new and LLM-based systems advance this trend in a continuous way. This leads to an amazing question: in current claims that “AI discovered X,” how should we understand the division of credit between humans and machines? Where along this continuum of computer-use in scientific-discovery do we draw the line of whether the discovery is made by the human or the computer?
 
+## References
+
 [^1]: Novikov, Alexander, et al. “AlphaEvolve: A coding agent for scientific and algorithmic discovery.” arXiv preprint arXiv:2506.13131 (2025). [arXiv:2506.13131](https://arxiv.org/abs/2506.13131)
 
 

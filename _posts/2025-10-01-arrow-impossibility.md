@@ -19,6 +19,8 @@ Now, if we conjecture that there exists a scale-free theory of intelligence — 
 
 Finally, if we conjecture that Popper’s view of democracy [^5] [^6] — rather than Arrow’s conception — better captures rational group decision-making, then we might ask: can we find parallels of Popper’s model in biological systems of voting as well? Exploring such biological analogues could provide falsifiable predictions for a scale-free theory of intelligence.
 
+## References
+
 [^1]: [Arrow’s impossibility theorem (Wikipedia)](https://en.wikipedia.org/wiki/Arrow%27s_impossibility_theorem)  
 [^2]: [Politics StackExchange: Does Gibbard–Satterthwaite theorem apply to all voting systems?](https://politics.stackexchange.com/questions/14015/does-gibbard-satterthwaite-theorem-apply-to-all-voting-systems/14120)  
 [^3]: [Veritasium: Why Democracy Is Mathematically Impossible](https://youtu.be/qf7ws2DF-zk?si=o5pdJ1mW3h7MaLWY)  
