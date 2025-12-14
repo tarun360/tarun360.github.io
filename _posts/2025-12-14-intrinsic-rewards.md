@@ -5,7 +5,7 @@ description: 'I argue that prevailing surprise-based conceptions of intrinsic re
 tags: [reinforcement-learning, intrinsic-motivation, curiosity, philosophy-of-ai, cognition]
 ---
 
-I have always been uneasy with how reinforcement learning models reward as part of the environment, but I felt somewhat unqualified to question it. I was recently glad to find like-minded friends on X ([Yoav Goldberg](https://u.cs.biu.ac.il/~yogo/) and [Hadi Vafaii](https://x.com/hadivafaii)) who shared my view and articulated it far better than I had in my own mind [^1] [^2]. I first summarize the argument, and then argue that a convenient patch often used to address this concern—*intrinsic rewards*, as they are commonly formulated in terms of sensory surprise or prediction error—is inadequate to explain curiosity in humans.
+I have always been uneasy with how reward is modeled as part of the environment in reinforcement learning, but I felt somewhat unqualified to question it. I was recently glad to find like-minded friends on X ([Yoav Goldberg](https://u.cs.biu.ac.il/~yogo/) and [Hadi Vafaii](https://x.com/hadivafaii)) who shared my view and articulated it far better than I had in my own mind [^1] [^2]. I first summarize the argument, and then argue that a convenient patch often used to address this concern—*intrinsic rewards*, as they are commonly formulated in terms of sensory surprise or prediction error—is inadequate to explain curiosity in humans.
 
 The following is the classic figure from *Reinforcement Learning* by Sutton & Barto:
 
@@ -15,13 +15,13 @@ At each time step \($$ t $$\), the agent takes an action \($$ A_t $$\) in the en
 
 The main point of contention is this: **should rewards be modeled as part of the environment or as part of the agent?**
 
-In the real world, no animate being has direct access to the environment—everything is inferred. The brain receives spikes, or action potentials, at its synapses from other neurons, and from these it infers what is “out there.” For example, photons exist; color does not. Color is an inferred quantity, constructed by the brain from incoming sensory data. Likewise, rewards (and, frankly, anything else) must be inferred by the agent [^2]. In other words, rewards should be modeled as part of the agent rather than the environment. This insight is also known in philosophy as the *theory-ladenness of observation* [^3].
+In the real world, no animate being has direct, unadulterated access to the environment—everything is inferred. The brain receives spikes, or action potentials, at its synapses from other neurons, and from these it infers what is “out there.” For example, photons exist; color does not. Color is an inferred quantity, constructed by the brain from incoming sensory data (an insight also known in philosophy as the *theory-ladenness of observation* [^3]). Likewise, rewards must be inferred by the agent by observing changes in the state of the world [^2]. That is, the reward mechanism should be modeled as part of the agent rather than the environment.
 
 This view goes directly against the basic building blocks of RL as described in *Reinforcement Learning* book:
 
-> “We always consider the reward computation to be external to the agent because it defines the task facing the agent and thus must be beyond its ability to change arbitrarily.”
+> *“We always consider the reward computation to be external to the agent because it defines the task facing the agent and thus must be beyond its ability to change arbitrarily.”*
 
-At this point, a common and convenient patch is *intrinsic rewards*—curiosity, surprise, or other domain-agnostic intrinsic signals. Now, notwithstanding that if reward is truly intrinsic to the agent then it already breaks the fundamental assumption of RL that reward must come from the environment [^2], I argue that the prevailing conception of intrinsic motivation itself is inadequate to explain human curiosity.
+At this point, a common and convenient patch is *intrinsic rewards*—curiosity, surprise, or other domain-agnostic intrinsic signals. Now, notwithstanding that if reward is completely intrinsic to the agent then it already breaks the fundamental assumption of RL that reward must come from the environment [^2], I argue that the prevailing conception of intrinsic motivation itself is inadequate to explain human curiosity.
 
 The most common formulation of intrinsic reward in RL is based on sensory surprise, prediction error, or closely related notions [^4]. The core idea is that the agent seeks sensory novelty in the environment and explores it. For example, a human infant might experience sensory surprise upon noticing a new toy, a bright light from a novel source, or an unfamiliar rattling sound, and would be motivated to explore it. Rich Sutton, in his recent talks on the OaK architecture at RLC’25 [^5] and NeurIPS’25, also alludes to this idea of creating an option upon the occurrence of an intrinsically rewarding event, using similar examples of infants noticing new toys or sounds.
 
