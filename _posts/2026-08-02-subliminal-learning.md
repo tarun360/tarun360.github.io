@@ -184,7 +184,7 @@ WIMHF’s Δwin and prevalence are themselves estimates, and how much a given mo
 - Cloud, Alex, et al. "Subliminal learning: Language models transmit behavioral traits via hidden signals in data." arXiv preprint arXiv:2507.14805 (2025).
 - Movva, Rajiv, et al. "What's In My Human Feedback? Learning Interpretable Descriptions of Preference Data." International Conference on Learning Representations. Vol. 2026. 2026.
 - Bhatia, Mehar, et al. "Value drifts: Tracing value alignment during llm post-training." arXiv preprint arXiv:2510.26707 (2025).
-- Stray, Jonathan, et al. "Political Neutrality as Balanced Approval: A Large-Scale Human Evaluation of AI Responses." arXiv preprint arXiv:2605.28911 (2026).
+- Zhang, Lily, et al. "Cultivating pluralism in algorithmic monoculture: The community alignment dataset." International Conference on Learning Representations. Vol. 2026. 2026.
 
 ---
 
