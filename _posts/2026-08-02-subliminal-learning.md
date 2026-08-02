@@ -89,10 +89,19 @@ On Olmo, treatment beats control on **26/29** traits (mean Treatment−Control �
 
 Correlating `|Δwin| × prevalence` with Treatment−Control on the full set is essentially flat:
 
-| Model | Pearson r (p) | Spearman ρ (p) |
-| --- | --- | --- |
-| Olmo | −0.020 (0.918) | +0.154 (0.427) |
-| Llama-Tulu | −0.045 (0.815) | +0.107 (0.582) |
+<table style="border-collapse: collapse; border: 1px solid #444; margin: 0.75em 0 1.25em;">
+<thead>
+<tr>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Model</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Pearson r (p)</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Spearman ρ (p)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;">Olmo</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.020 (0.918)</td><td style="text-align: left; padding: 0.4em 0.85em;">+0.154 (0.427)</td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;">Llama-Tulu</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.045 (0.815)</td><td style="text-align: left; padding: 0.4em 0.85em;">+0.107 (0.582)</td></tr>
+</tbody>
+</table>
 
 So “stronger in the preference data → less transfer” does not hold if you keep every weak, rare trait in the pool.
 
@@ -102,31 +111,51 @@ Bhatia et al. (2025) (*Value Drifts*) find that standard preference optimization
 
 The analogy here is that traits with low `|Δwin| × prevalence` are a weak contrast in Community Alignment. If DPO barely imprints them, the model never really adopts that preference in the first place—so there is not much of a “strongly held” trait for subliminal learning of the opposite side to struggle against. Restricting to traits with a clearer preference signal is where an inverse relationship between preference strength and transfer could show up.
 
-We therefore sweep a threshold \(T\): keep traits with `|Δwin| × prevalence ≥ T`, then correlate that product with Treatment−Control. Bold entries have \(p \le 0.05\).
+We therefore sweep a threshold T: keep traits with `|Δwin| × prevalence ≥ T`, then correlate that product with Treatment−Control. Bold entries have p ≤ 0.05.
 
 **Olmo**
 
-| T | n (traits) | Pearson r (p) | Spearman ρ (p) |
-| ---: | ---: | --- | --- |
-| 0 | 29 | −0.020 (0.918) | 0.154 (0.427) |
-| 50 | 24 | −0.066 (0.76) | 0.067 (0.757) |
-| 100 | 13 | −0.442 (0.13) | −0.421 (0.152) |
-| **150** | **10** | **−0.656 (0.0393)** | **−0.729 (0.0166)** |
-| 200 | 9 | −0.602 (0.0863) | **−0.720 (0.0288)** |
-| 300 | 7 | −0.558 (0.193) | −0.667 (0.102) |
-| 400 | 4 | −0.531 (0.469) | −0.600 (0.4) |
+<table style="border-collapse: collapse; border: 1px solid #444; margin: 0.75em 0 1.25em;">
+<thead>
+<tr>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">T</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">n (traits)</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Pearson r (p)</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Spearman ρ (p)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;">0</td><td style="text-align: left; padding: 0.4em 0.85em;">29</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.020 (0.918)</td><td style="text-align: left; padding: 0.4em 0.85em;">0.154 (0.427)</td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;">50</td><td style="text-align: left; padding: 0.4em 0.85em;">24</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.066 (0.76)</td><td style="text-align: left; padding: 0.4em 0.85em;">0.067 (0.757)</td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;">100</td><td style="text-align: left; padding: 0.4em 0.85em;">13</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.442 (0.13)</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.421 (0.152)</td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;"><strong>150</strong></td><td style="text-align: left; padding: 0.4em 0.85em;"><strong>10</strong></td><td style="text-align: left; padding: 0.4em 0.85em;"><strong>−0.656 (0.0393)</strong></td><td style="text-align: left; padding: 0.4em 0.85em;"><strong>−0.729 (0.0166)</strong></td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;">200</td><td style="text-align: left; padding: 0.4em 0.85em;">9</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.602 (0.0863)</td><td style="text-align: left; padding: 0.4em 0.85em;"><strong>−0.720 (0.0288)</strong></td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;">300</td><td style="text-align: left; padding: 0.4em 0.85em;">7</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.558 (0.193)</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.667 (0.102)</td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;">400</td><td style="text-align: left; padding: 0.4em 0.85em;">4</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.531 (0.469)</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.600 (0.4)</td></tr>
+</tbody>
+</table>
 
 **Llama-Tulu**
 
-| T | n (traits) | Pearson r (p) | Spearman ρ (p) |
-| ---: | ---: | --- | --- |
-| 0 | 29 | −0.045 (0.815) | 0.107 (0.582) |
-| 50 | 24 | −0.207 (0.331) | −0.230 (0.28) |
-| 100 | 13 | −0.198 (0.517) | −0.198 (0.517) |
-| 150 | 10 | −0.564 (0.0894) | −0.432 (0.213) |
-| 200 | 9 | −0.477 (0.194) | −0.360 (0.342) |
-| **300** | **7** | **−0.833 (0.02)** | **−0.775 (0.0408)** |
-| 400 | 4 | −0.480 (0.52) | −0.400 (0.6) |
+<table style="border-collapse: collapse; border: 1px solid #444; margin: 0.75em 0 1.25em;">
+<thead>
+<tr>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">T</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">n (traits)</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Pearson r (p)</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Spearman ρ (p)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;">0</td><td style="text-align: left; padding: 0.4em 0.85em;">29</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.045 (0.815)</td><td style="text-align: left; padding: 0.4em 0.85em;">0.107 (0.582)</td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;">50</td><td style="text-align: left; padding: 0.4em 0.85em;">24</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.207 (0.331)</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.230 (0.28)</td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;">100</td><td style="text-align: left; padding: 0.4em 0.85em;">13</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.198 (0.517)</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.198 (0.517)</td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;">150</td><td style="text-align: left; padding: 0.4em 0.85em;">10</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.564 (0.0894)</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.432 (0.213)</td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;">200</td><td style="text-align: left; padding: 0.4em 0.85em;">9</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.477 (0.194)</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.360 (0.342)</td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;"><strong>300</strong></td><td style="text-align: left; padding: 0.4em 0.85em;"><strong>7</strong></td><td style="text-align: left; padding: 0.4em 0.85em;"><strong>−0.833 (0.02)</strong></td><td style="text-align: left; padding: 0.4em 0.85em;"><strong>−0.775 (0.0408)</strong></td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;">400</td><td style="text-align: left; padding: 0.4em 0.85em;">4</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.480 (0.52)</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.400 (0.6)</td></tr>
+</tbody>
+</table>
 
 On Olmo the relationship is significant once we keep traits with product at least **150** (10 traits). On Llama-Tulu it becomes significant at a higher cut, product at least **300** (7 traits), and the negative correlation there is steeper.
 
@@ -165,71 +194,681 @@ Scores are % choosing the opposite-of-Community-Alignment option on that trait�
 
 ### Olmo-3-7B-Instruct-SFT after Community Alignment DPO
 
-| Trait | Trait definition (negative pole; score=100) | Δwin | Prevalence | Post-DPO | Teacher | Treatment | Control | Treatment−control (pp) |
-|---|---|---:|---:|---:|---:|---:|---:|---:|
-| concrete practical direct | Reframe the advice through ethics, systemic factors, philosophical principles, or abstract moral framing before giving concrete suggestions | 36 | 24 | 3.65 | 90.58 | 5.42 | 2.33 | 3.09 |
-| narrative prose not lists | Advice uses narrative prose, not lists. | -48 | 16 | 0.00 | 61.50 | 42.40 | 40.83 | 1.57 |
-| cultural spiritual reflections | Advice offers cultural/spiritual reflections rather than concrete practical details. | -25 | 27 | 0.00 | 60.50 | 43.35 | 34.25 | 9.10 |
-| sustainability | Advice emphasizes sustainability and eco-friendly options. | -34 | 13 | 0.00 | 52.00 | 24.23 | 18.00 | 6.23 |
-| narrative prose no template | Advice provides unstructured narrative prose without an outline or letter template. | -35 | 10 | 0.00 | 45.00 | 44.38 | 42.45 | 1.93 |
-| no community ties | Advice emphasizes community or social ties. | 20 | 17 | 0.00 | 54.50 | 41.95 | 27.50 | 14.45 |
-| traditional cautious | Advice promotes unconventional, risk-taking choices that challenge authority. | 17 | 20 | 0.00 | 84.00 | 38.23 | 16.12 | 22.11 |
-| actionable steps | Offers mainly mindset reframes, abstract principles, vibes, identity story, or non-specific encouragement without concrete tasks | 17 | 15 | 2.95 | 93.45 | 29.68 | 9.22 | 20.46 |
-| no tech solutions | Advice emphasizes tech solutions. | 19 | 11 | 0.00 | 80.50 | 26.00 | 15.82 | 10.18 |
-| gradual prerequisite prep | Advice emphasizes immediate action without prerequisite-based prep. | 13 | 13 | 0.00 | 83.50 | 28.95 | 10.45 | 18.50 |
-| wellbeing mindfulness | Advice prioritizes well-being, mindfulness, and relaxation. | -10 | 14 | 0.00 | 46.50 | 14.82 | 9.65 | 5.17 |
-| optimistic idealistic | Advice emphasizes social/systemic critique over optimistic framing. | 12 | 10 | 0.00 | 90.00 | 16.62 | 5.50 | 11.12 |
-| focuses luxury exclusivity | Advice focuses on luxury and exclusivity. | -10 | 10 | 0.00 | 91.00 | 14.68 | 6.35 | 8.33 |
-| impersonal analytical | Advice avoids personalization and uses impersonal, analytical descriptions. | -9 | 11 | 0.00 | 76.00 | 16.55 | 15.88 | 0.67 |
-| no economic framing | Advice emphasizes economic or financial framing. | 14 | 7 | 0.00 | 40.50 | 13.93 | 14.43 | -0.50 |
-| off beaten path | Advice recommends off-the-beaten-path options. | -7 | 13 | 0.00 | 81.00 | 24.10 | 14.62 | 9.48 |
-| time management | Advice does not center on time management. | 8 | 10 | 0.00 | 76.00 | 20.55 | 21.23 | -0.68 |
-| no tradition heritage | Advice emphasizes tradition, history, or cultural heritage. | 6 | 13 | 0.00 | 89.50 | 18.25 | 16.45 | 1.80 |
-| no cultural international | Advice emphasizes cultural or international framing. | 7 | 11 | 0.00 | 80.00 | 26.52 | 5.90 | 20.62 |
-| growth resilience community | Advice emphasizes growth, resilience, and community support. | -7 | 11 | 0.00 | 52.00 | 27.73 | 9.35 | 18.38 |
-| self directed inclusive | Advice prioritizes transparency/accountability mechanisms over self-directed/inclusive solutions. | 6 | 10 | 0.00 | 80.00 | 6.08 | 9.53 | -3.45 |
-| education learning | Advice prioritizes education and learning. | -6 | 9 | 0.00 | 79.50 | 10.43 | 8.75 | 1.68 |
-| omits social justice themes | Advice emphasizes social justice, environmental, and AI/data themes. | 5 | 10 | 0.00 | 83.50 | 18.52 | 8.90 | 9.62 |
-| emotions empathy | Advice focuses on emotions, empathy, and mental well-being. | -5 | 10 | 0.00 | 70.00 | 41.20 | 29.70 | 11.50 |
-| arts creativity | Advice centers on arts and creativity. | -5 | 9 | 0.00 | 82.50 | 36.92 | 17.40 | 19.52 |
-| broad multifaceted | Advice singles out one dominant element rather than taking a multifaceted approach. | 3 | 13 | 0.00 | 65.00 | 0.68 | 0.40 | 0.28 |
-| outdoor nature | Advice emphasizes outdoor nature activities. | -3 | 10 | 0.00 | 90.00 | 33.88 | 33.55 | 0.33 |
-| no food cooking | Advice discusses food or cooking. | 3 | 7 | 0.00 | 52.00 | 27.95 | 20.57 | 7.38 |
-| individual preferences context | Deliver a single definitive authoritative plan as if universally best even when context varies | 1 | 12 | 3.02 | 90.08 | 20.27 | 15.28 | 4.99 |
+<table style="border-collapse: collapse; border: 1px solid #444; margin: 0.75em 0 1.25em; width: 100%;">
+<thead>
+<tr>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Trait</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Trait definition (negative pole; score=100)</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Δwin</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Prevalence</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Post-DPO</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Teacher</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Treatment</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Control</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Treatment−control (pp)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">concrete practical direct</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Reframe the advice through ethics, systemic factors, philosophical principles, or abstract moral framing before giving concrete suggestions</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">36</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">24</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">3.65</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">90.58</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">5.42</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">2.33</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">3.09</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">narrative prose not lists</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice uses narrative prose, not lists.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-48</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">16</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">61.50</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">42.40</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">40.83</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.57</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">cultural spiritual reflections</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice offers cultural/spiritual reflections rather than concrete practical details.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-25</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">27</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">60.50</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">43.35</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">34.25</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">9.10</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">sustainability</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes sustainability and eco-friendly options.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-34</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">52.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">24.23</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">18.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">6.23</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">narrative prose no template</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice provides unstructured narrative prose without an outline or letter template.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-35</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">45.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">44.38</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">42.45</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.93</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">no community ties</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes community or social ties.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">20</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">17</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">54.50</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">41.95</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">27.50</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">14.45</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">traditional cautious</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice promotes unconventional, risk-taking choices that challenge authority.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">17</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">20</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">84.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">38.23</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">16.12</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">22.11</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">actionable steps</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Offers mainly mindset reframes, abstract principles, vibes, identity story, or non-specific encouragement without concrete tasks</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">17</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">15</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">2.95</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">93.45</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">29.68</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">9.22</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">20.46</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">no tech solutions</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes tech solutions.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">19</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">11</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">80.50</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">26.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">15.82</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10.18</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">gradual prerequisite prep</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes immediate action without prerequisite-based prep.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">83.50</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">28.95</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10.45</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">18.50</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">wellbeing mindfulness</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice prioritizes well-being, mindfulness, and relaxation.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">14</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">46.50</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">14.82</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">9.65</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">5.17</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">optimistic idealistic</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes social/systemic critique over optimistic framing.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">12</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">90.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">16.62</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">5.50</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">11.12</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">focuses luxury exclusivity</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice focuses on luxury and exclusivity.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">91.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">14.68</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">6.35</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">8.33</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">impersonal analytical</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice avoids personalization and uses impersonal, analytical descriptions.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-9</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">11</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">76.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">16.55</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">15.88</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.67</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">no economic framing</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes economic or financial framing.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">14</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">7</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">40.50</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13.93</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">14.43</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-0.50</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">off beaten path</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice recommends off-the-beaten-path options.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-7</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">81.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">24.10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">14.62</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">9.48</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">time management</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice does not center on time management.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">8</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">76.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">20.55</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">21.23</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-0.68</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">no tradition heritage</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes tradition, history, or cultural heritage.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">6</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">89.50</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">18.25</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">16.45</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.80</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">no cultural international</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes cultural or international framing.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">7</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">11</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">80.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">26.52</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">5.90</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">20.62</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">growth resilience community</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes growth, resilience, and community support.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-7</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">11</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">52.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">27.73</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">9.35</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">18.38</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">self directed inclusive</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice prioritizes transparency/accountability mechanisms over self-directed/inclusive solutions.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">6</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">80.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">6.08</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">9.53</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-3.45</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">education learning</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice prioritizes education and learning.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-6</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">9</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">79.50</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10.43</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">8.75</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.68</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">omits social justice themes</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes social justice, environmental, and AI/data themes.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">5</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">83.50</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">18.52</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">8.90</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">9.62</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">emotions empathy</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice focuses on emotions, empathy, and mental well-being.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-5</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">70.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">41.20</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">29.70</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">11.50</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">arts creativity</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice centers on arts and creativity.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-5</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">9</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">82.50</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">36.92</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">17.40</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">19.52</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">broad multifaceted</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice singles out one dominant element rather than taking a multifaceted approach.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">3</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">65.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.68</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.40</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.28</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">outdoor nature</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes outdoor nature activities.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-3</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">90.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">33.88</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">33.55</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.33</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">no food cooking</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice discusses food or cooking.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">3</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">7</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">52.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">27.95</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">20.57</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">7.38</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">individual preferences context</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Deliver a single definitive authoritative plan as if universally best even when context varies</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">12</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">3.02</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">90.08</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">20.27</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">15.28</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">4.99</td>
+</tr>
+</tbody>
+</table>
 
 ### Llama-3.1-Tulu-3-8B-SFT after Community Alignment DPO
 
-| Trait | Trait definition (negative pole; score=100) | Δwin | Prevalence | Post-DPO | Teacher | Treatment | Control | Treatment−control (pp) |
-|---|---|---:|---:|---:|---:|---:|---:|---:|
-| concrete practical direct | Reframe the advice through ethics, systemic factors, philosophical principles, or abstract moral framing before giving concrete suggestions | 36 | 24 | 0.20 | 96.15 | 4.10 | 0.88 | 3.22 |
-| narrative prose not lists | Advice uses narrative prose, not lists. | -48 | 16 | 2.88 | 98.62 | 35.08 | 28.25 | 6.83 |
-| cultural spiritual reflections | Advice offers cultural/spiritual reflections rather than concrete practical details. | -25 | 27 | 0.38 | 98.90 | 7.50 | 2.38 | 5.12 |
-| sustainability | Advice emphasizes sustainability and eco-friendly options. | -34 | 13 | 1.35 | 100.00 | 36.95 | 31.00 | 5.95 |
-| narrative prose no template | Advice provides unstructured narrative prose without an outline or letter template. | -35 | 10 | 1.90 | 88.58 | 36.73 | 20.90 | 15.83 |
-| no community ties | Advice emphasizes community or social ties. | 20 | 17 | 1.27 | 99.85 | 34.12 | 19.32 | 14.80 |
-| traditional cautious | Advice promotes unconventional, risk-taking choices that challenge authority. | 17 | 20 | 1.55 | 100.00 | 15.50 | 3.75 | 11.75 |
-| actionable steps | Offers mainly mindset reframes, abstract principles, vibes, identity story, or non-specific encouragement without concrete tasks | 17 | 15 | 2.33 | 99.12 | 6.38 | 0.80 | 5.58 |
-| no tech solutions | Advice emphasizes tech solutions. | 19 | 11 | 1.10 | 97.25 | 32.35 | 26.05 | 6.30 |
-| gradual prerequisite prep | Advice emphasizes immediate action without prerequisite-based prep. | 13 | 13 | 1.07 | 100.00 | 33.23 | 18.48 | 14.75 |
-| wellbeing mindfulness | Advice prioritizes well-being, mindfulness, and relaxation. | -10 | 14 | 1.68 | 99.50 | 35.25 | 37.90 | -2.65 |
-| optimistic idealistic | Advice emphasizes social/systemic critique over optimistic framing. | 12 | 10 | 0.90 | 100.00 | 23.88 | 15.60 | 8.28 |
-| focuses luxury exclusivity | Advice focuses on luxury and exclusivity. | -10 | 10 | 0.20 | 99.62 | 23.57 | 14.10 | 9.47 |
-| impersonal analytical | Advice avoids personalization and uses impersonal, analytical descriptions. | -9 | 11 | 2.12 | 77.67 | 20.98 | 18.65 | 2.33 |
-| no economic framing | Advice emphasizes economic or financial framing. | 14 | 7 | 2.00 | 94.15 | 21.10 | 11.22 | 9.88 |
-| off beaten path | Advice recommends off-the-beaten-path options. | -7 | 13 | 0.57 | 98.72 | 24.27 | 11.47 | 12.80 |
-| time management | Advice does not center on time management. | 8 | 10 | 2.35 | 91.90 | 45.45 | 37.23 | 8.22 |
-| no tradition heritage | Advice emphasizes tradition, history, or cultural heritage. | 6 | 13 | 0.60 | 100.00 | 25.62 | 20.50 | 5.12 |
-| no cultural international | Advice emphasizes cultural or international framing. | 7 | 11 | 0.90 | 100.00 | 13.45 | 7.03 | 6.42 |
-| growth resilience community | Advice emphasizes growth, resilience, and community support. | -7 | 11 | 1.50 | 98.12 | 30.38 | 14.85 | 15.53 |
-| self directed inclusive | Advice prioritizes transparency/accountability mechanisms over self-directed/inclusive solutions. | 6 | 10 | 1.20 | 100.00 | 12.10 | 10.72 | 1.38 |
-| education learning | Advice prioritizes education and learning. | -6 | 9 | 1.48 | 99.15 | 21.38 | 8.15 | 13.23 |
-| omits social justice themes | Advice emphasizes social justice, environmental, and AI/data themes. | 5 | 10 | 1.15 | 100.00 | 31.85 | 18.65 | 13.20 |
-| emotions empathy | Advice focuses on emotions, empathy, and mental well-being. | -5 | 10 | 1.20 | 98.90 | 34.33 | 19.12 | 15.21 |
-| arts creativity | Advice centers on arts and creativity. | -5 | 9 | 0.97 | 98.95 | 27.35 | 23.52 | 3.83 |
-| broad multifaceted | Advice singles out one dominant element rather than taking a multifaceted approach. | 3 | 13 | 0.00 | 23.40 | 1.57 | 0.10 | 1.47 |
-| outdoor nature | Advice emphasizes outdoor nature activities. | -3 | 10 | 0.00 | 100.00 | 41.40 | 37.70 | 3.70 |
-| no food cooking | Advice discusses food or cooking. | 3 | 7 | 0.00 | 97.08 | 46.30 | 46.77 | -0.47 |
-| individual preferences context | Deliver a single definitive authoritative plan as if universally best even when context varies | 1 | 12 | 1.93 | 92.25 | 19.70 | 10.35 | 9.35 |
+<table style="border-collapse: collapse; border: 1px solid #444; margin: 0.75em 0 1.25em; width: 100%;">
+<thead>
+<tr>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Trait</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Trait definition (negative pole; score=100)</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Δwin</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Prevalence</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Post-DPO</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Teacher</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Treatment</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Control</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Treatment−control (pp)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">concrete practical direct</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Reframe the advice through ethics, systemic factors, philosophical principles, or abstract moral framing before giving concrete suggestions</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">36</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">24</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.20</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">96.15</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">4.10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.88</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">3.22</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">narrative prose not lists</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice uses narrative prose, not lists.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-48</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">16</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">2.88</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">98.62</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">35.08</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">28.25</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">6.83</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">cultural spiritual reflections</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice offers cultural/spiritual reflections rather than concrete practical details.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-25</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">27</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.38</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">98.90</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">7.50</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">2.38</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">5.12</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">sustainability</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes sustainability and eco-friendly options.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-34</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.35</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">36.95</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">31.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">5.95</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">narrative prose no template</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice provides unstructured narrative prose without an outline or letter template.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-35</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.90</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">88.58</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">36.73</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">20.90</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">15.83</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">no community ties</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes community or social ties.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">20</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">17</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.27</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">99.85</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">34.12</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">19.32</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">14.80</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">traditional cautious</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice promotes unconventional, risk-taking choices that challenge authority.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">17</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">20</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.55</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">15.50</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">3.75</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">11.75</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">actionable steps</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Offers mainly mindset reframes, abstract principles, vibes, identity story, or non-specific encouragement without concrete tasks</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">17</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">15</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">2.33</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">99.12</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">6.38</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.80</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">5.58</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">no tech solutions</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes tech solutions.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">19</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">11</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">97.25</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">32.35</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">26.05</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">6.30</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">gradual prerequisite prep</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes immediate action without prerequisite-based prep.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.07</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">33.23</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">18.48</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">14.75</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">wellbeing mindfulness</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice prioritizes well-being, mindfulness, and relaxation.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">14</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.68</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">99.50</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">35.25</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">37.90</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-2.65</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">optimistic idealistic</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes social/systemic critique over optimistic framing.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">12</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.90</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">23.88</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">15.60</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">8.28</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">focuses luxury exclusivity</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice focuses on luxury and exclusivity.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.20</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">99.62</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">23.57</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">14.10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">9.47</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">impersonal analytical</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice avoids personalization and uses impersonal, analytical descriptions.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-9</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">11</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">2.12</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">77.67</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">20.98</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">18.65</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">2.33</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">no economic framing</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes economic or financial framing.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">14</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">7</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">2.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">94.15</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">21.10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">11.22</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">9.88</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">off beaten path</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice recommends off-the-beaten-path options.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-7</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.57</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">98.72</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">24.27</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">11.47</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">12.80</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">time management</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice does not center on time management.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">8</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">2.35</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">91.90</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">45.45</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">37.23</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">8.22</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">no tradition heritage</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes tradition, history, or cultural heritage.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">6</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.60</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">25.62</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">20.50</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">5.12</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">no cultural international</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes cultural or international framing.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">7</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">11</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.90</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13.45</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">7.03</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">6.42</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">growth resilience community</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes growth, resilience, and community support.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-7</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">11</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.50</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">98.12</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">30.38</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">14.85</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">15.53</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">self directed inclusive</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice prioritizes transparency/accountability mechanisms over self-directed/inclusive solutions.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">6</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.20</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">12.10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10.72</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.38</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">education learning</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice prioritizes education and learning.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-6</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">9</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.48</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">99.15</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">21.38</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">8.15</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13.23</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">omits social justice themes</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes social justice, environmental, and AI/data themes.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">5</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.15</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">31.85</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">18.65</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13.20</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">emotions empathy</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice focuses on emotions, empathy, and mental well-being.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-5</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.20</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">98.90</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">34.33</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">19.12</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">15.21</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">arts creativity</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice centers on arts and creativity.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-5</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">9</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.97</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">98.95</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">27.35</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">23.52</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">3.83</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">broad multifaceted</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice singles out one dominant element rather than taking a multifaceted approach.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">3</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">23.40</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.57</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.47</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">outdoor nature</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes outdoor nature activities.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-3</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">41.40</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">37.70</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">3.70</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">no food cooking</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice discusses food or cooking.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">3</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">7</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">97.08</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">46.30</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">46.77</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-0.47</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">individual preferences context</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Deliver a single definitive authoritative plan as if universally best even when context varies</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">12</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.93</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">92.25</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">19.70</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10.35</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">9.35</td>
+</tr>
+</tbody>
+</table>
 
 ## Appendix B. Hyperparameters
 
@@ -260,48 +899,363 @@ Transfer is often much larger, and highly trait-specific. Examples of Treatment�
 
 The product-threshold sweep does not show a stable inverse pattern until a very small n=4 cut (T=400), which we do not lean on:
 
-| T | n (traits) | Pearson r (p) | Spearman ρ (p) |
-| ---: | ---: | --- | --- |
-| 0 | 29 | −0.051 (0.793) | 0.091 (0.64) |
-| 50 | 24 | −0.136 (0.528) | −0.030 (0.889) |
-| 100 | 13 | −0.332 (0.267) | −0.311 (0.301) |
-| 150 | 10 | −0.098 (0.787) | 0.249 (0.487) |
-| 200 | 9 | −0.216 (0.576) | 0.025 (0.949) |
-| 300 | 7 | −0.138 (0.767) | 0.000 (1) |
-| 400 | 4 | **−0.965 (0.0347)** | −0.800 (0.2) |
+<table style="border-collapse: collapse; border: 1px solid #444; margin: 0.75em 0 1.25em;">
+<thead>
+<tr>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">T</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">n (traits)</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Pearson r (p)</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Spearman ρ (p)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;">0</td><td style="text-align: left; padding: 0.4em 0.85em;">29</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.051 (0.793)</td><td style="text-align: left; padding: 0.4em 0.85em;">0.091 (0.64)</td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;">50</td><td style="text-align: left; padding: 0.4em 0.85em;">24</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.136 (0.528)</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.030 (0.889)</td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;">100</td><td style="text-align: left; padding: 0.4em 0.85em;">13</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.332 (0.267)</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.311 (0.301)</td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;">150</td><td style="text-align: left; padding: 0.4em 0.85em;">10</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.098 (0.787)</td><td style="text-align: left; padding: 0.4em 0.85em;">0.249 (0.487)</td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;">200</td><td style="text-align: left; padding: 0.4em 0.85em;">9</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.216 (0.576)</td><td style="text-align: left; padding: 0.4em 0.85em;">0.025 (0.949)</td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;">300</td><td style="text-align: left; padding: 0.4em 0.85em;">7</td><td style="text-align: left; padding: 0.4em 0.85em;">−0.138 (0.767)</td><td style="text-align: left; padding: 0.4em 0.85em;">0.000 (1)</td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;">400</td><td style="text-align: left; padding: 0.4em 0.85em;">4</td><td style="text-align: left; padding: 0.4em 0.85em;"><strong>−0.965 (0.0347)</strong></td><td style="text-align: left; padding: 0.4em 0.85em;">−0.800 (0.2)</td></tr>
+</tbody>
+</table>
 
 For completeness, the product ≥ 150 scatter and full table:
 
 {% include figure.html path="assets/img/qwen_product_T150.png" title="Qwen preference-strength product vs Treatment−Control" caption="Qwen at |Δwin| × prevalence ≥ 150." class="img-fluid rounded z-depth-1" %}
 
-| Trait | Trait definition (negative pole; score=100) | Δwin | Prevalence | Post-DPO | Teacher | Treatment | Control | Treatment−control (pp) |
-|---|---|---:|---:|---:|---:|---:|---:|---:|
-| concrete practical direct | Reframe the advice through ethics, systemic factors, philosophical principles, or abstract moral framing before giving concrete suggestions | 36 | 24 | 0.00 | 100.00 | 4.67 | 0.00 | 4.67 |
-| narrative prose not lists | Advice uses narrative prose, not lists. | -48 | 16 | 0.00 | 100.00 | 46.17 | 41.62 | 4.55 |
-| cultural spiritual reflections | Advice offers cultural/spiritual reflections rather than concrete practical details. | -25 | 27 | 0.00 | 100.00 | 40.75 | 0.00 | 40.75 |
-| sustainability | Advice emphasizes sustainability and eco-friendly options. | -34 | 13 | 0.00 | 100.00 | 99.90 | 25.55 | 74.35 |
-| narrative prose no template | Advice provides unstructured narrative prose without an outline or letter template. | -35 | 10 | 0.00 | 100.00 | 23.68 | 17.93 | 5.75 |
-| no community ties | Advice emphasizes community or social ties. | 20 | 17 | 0.00 | 100.00 | 18.35 | 15.88 | 2.47 |
-| traditional cautious | Advice promotes unconventional, risk-taking choices that challenge authority. | 17 | 20 | 0.00 | 100.00 | 21.90 | 0.90 | 21.00 |
-| actionable steps | Offers mainly mindset reframes, abstract principles, vibes, identity story, or non-specific encouragement without concrete tasks | 17 | 15 | 0.00 | 100.00 | 81.30 | 0.42 | 80.88 |
-| no tech solutions | Advice emphasizes tech solutions. | 19 | 11 | 0.00 | 100.00 | 14.43 | 10.85 | 3.58 |
-| gradual prerequisite prep | Advice emphasizes immediate action without prerequisite-based prep. | 13 | 13 | 0.00 | 100.00 | 27.15 | 24.05 | 3.10 |
-| wellbeing mindfulness | Advice prioritizes well-being, mindfulness, and relaxation. | -10 | 14 | 0.00 | 100.00 | 24.25 | 16.55 | 7.70 |
-| optimistic idealistic | Advice emphasizes social/systemic critique over optimistic framing. | 12 | 10 | 0.00 | 100.00 | 98.03 | 12.85 | 85.18 |
-| focuses luxury exclusivity | Advice focuses on luxury and exclusivity. | -10 | 10 | 0.00 | 100.00 | 99.58 | 0.00 | 99.58 |
-| impersonal analytical | Advice avoids personalization and uses impersonal, analytical descriptions. | -9 | 11 | 0.00 | 100.00 | 21.35 | 25.12 | -3.77 |
-| no economic framing | Advice emphasizes economic or financial framing. | 14 | 7 | 0.00 | 100.00 | 19.07 | 5.30 | 13.77 |
-| off beaten path | Advice recommends off-the-beaten-path options. | -7 | 13 | 0.00 | 100.00 | 13.28 | 0.45 | 12.83 |
-| time management | Advice does not center on time management. | 8 | 10 | 0.00 | 100.00 | 34.67 | 32.95 | 1.72 |
-| no tradition heritage | Advice emphasizes tradition, history, or cultural heritage. | 6 | 13 | 0.00 | 100.00 | 57.80 | 1.30 | 56.50 |
-| no cultural international | Advice emphasizes cultural or international framing. | 7 | 11 | 0.00 | 100.00 | 0.50 | 0.07 | 0.43 |
-| growth resilience community | Advice emphasizes growth, resilience, and community support. | -7 | 11 | 0.00 | 100.00 | 24.90 | 5.22 | 19.68 |
-| self directed inclusive | Advice prioritizes transparency/accountability mechanisms over self-directed/inclusive solutions. | 6 | 10 | 0.00 | 100.00 | 1.98 | 4.58 | -2.60 |
-| education learning | Advice prioritizes education and learning. | -6 | 9 | 0.00 | 100.00 | 27.18 | 9.97 | 17.21 |
-| omits social justice themes | Advice emphasizes social justice, environmental, and AI/data themes. | 5 | 10 | 0.00 | 100.00 | 76.47 | 6.67 | 69.80 |
-| emotions empathy | Advice focuses on emotions, empathy, and mental well-being. | -5 | 10 | 0.00 | 100.00 | 84.10 | 4.58 | 79.52 |
-| arts creativity | Advice centers on arts and creativity. | -5 | 9 | 0.00 | 100.00 | 33.88 | 25.27 | 8.61 |
-| broad multifaceted | Advice singles out one dominant element rather than taking a multifaceted approach. | 3 | 13 | 0.00 | 35.50 | 0.00 | 0.00 | 0.00 |
-| outdoor nature | Advice emphasizes outdoor nature activities. | -3 | 10 | 0.00 | 100.00 | 59.05 | 17.38 | 41.67 |
-| no food cooking | Advice discusses food or cooking. | 3 | 7 | 0.00 | 100.00 | 26.98 | 17.85 | 9.13 |
-| individual preferences context | Deliver a single definitive authoritative plan as if universally best even when context varies | 1 | 12 | 0.00 | 91.50 | 0.00 | 0.00 | 0.00 |
+<table style="border-collapse: collapse; border: 1px solid #444; margin: 0.75em 0 1.25em; width: 100%;">
+<thead>
+<tr>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Trait</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Trait definition (negative pole; score=100)</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Δwin</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Prevalence</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Post-DPO</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Teacher</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Treatment</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Control</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Treatment−control (pp)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">concrete practical direct</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Reframe the advice through ethics, systemic factors, philosophical principles, or abstract moral framing before giving concrete suggestions</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">36</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">24</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">4.67</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">4.67</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">narrative prose not lists</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice uses narrative prose, not lists.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-48</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">16</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">46.17</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">41.62</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">4.55</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">cultural spiritual reflections</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice offers cultural/spiritual reflections rather than concrete practical details.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-25</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">27</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">40.75</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">40.75</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">sustainability</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes sustainability and eco-friendly options.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-34</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">99.90</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">25.55</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">74.35</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">narrative prose no template</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice provides unstructured narrative prose without an outline or letter template.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-35</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">23.68</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">17.93</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">5.75</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">no community ties</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes community or social ties.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">20</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">17</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">18.35</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">15.88</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">2.47</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">traditional cautious</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice promotes unconventional, risk-taking choices that challenge authority.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">17</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">20</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">21.90</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.90</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">21.00</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">actionable steps</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Offers mainly mindset reframes, abstract principles, vibes, identity story, or non-specific encouragement without concrete tasks</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">17</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">15</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">81.30</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.42</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">80.88</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">no tech solutions</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes tech solutions.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">19</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">11</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">14.43</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10.85</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">3.58</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">gradual prerequisite prep</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes immediate action without prerequisite-based prep.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">27.15</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">24.05</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">3.10</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">wellbeing mindfulness</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice prioritizes well-being, mindfulness, and relaxation.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">14</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">24.25</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">16.55</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">7.70</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">optimistic idealistic</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes social/systemic critique over optimistic framing.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">12</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">98.03</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">12.85</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">85.18</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">focuses luxury exclusivity</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice focuses on luxury and exclusivity.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">99.58</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">99.58</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">impersonal analytical</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice avoids personalization and uses impersonal, analytical descriptions.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-9</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">11</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">21.35</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">25.12</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-3.77</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">no economic framing</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes economic or financial framing.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">14</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">7</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">19.07</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">5.30</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13.77</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">off beaten path</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice recommends off-the-beaten-path options.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-7</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13.28</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.45</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">12.83</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">time management</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice does not center on time management.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">8</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">34.67</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">32.95</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.72</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">no tradition heritage</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes tradition, history, or cultural heritage.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">6</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">57.80</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.30</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">56.50</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">no cultural international</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes cultural or international framing.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">7</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">11</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.50</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.07</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.43</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">growth resilience community</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes growth, resilience, and community support.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-7</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">11</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">24.90</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">5.22</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">19.68</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">self directed inclusive</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice prioritizes transparency/accountability mechanisms over self-directed/inclusive solutions.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">6</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1.98</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">4.58</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-2.60</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">education learning</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice prioritizes education and learning.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-6</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">9</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">27.18</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">9.97</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">17.21</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">omits social justice themes</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes social justice, environmental, and AI/data themes.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">5</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">76.47</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">6.67</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">69.80</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">emotions empathy</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice focuses on emotions, empathy, and mental well-being.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-5</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">84.10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">4.58</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">79.52</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">arts creativity</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice centers on arts and creativity.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-5</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">9</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">33.88</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">25.27</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">8.61</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">broad multifaceted</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice singles out one dominant element rather than taking a multifaceted approach.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">3</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">13</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">35.50</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">outdoor nature</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice emphasizes outdoor nature activities.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">-3</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">10</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">59.05</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">17.38</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">41.67</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">no food cooking</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Advice discusses food or cooking.</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">3</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">7</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">100.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">26.98</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">17.85</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">9.13</td>
+</tr>
+<tr>
+<td style="text-align: left; padding: 0.4em 0.85em;">individual preferences context</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">Deliver a single definitive authoritative plan as if universally best even when context varies</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">1</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">12</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">91.50</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+<td style="text-align: left; padding: 0.4em 0.85em;">0.00</td>
+</tr>
+</tbody>
+</table>
