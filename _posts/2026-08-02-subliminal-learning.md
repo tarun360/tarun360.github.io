@@ -64,13 +64,21 @@ At a high level:
 
 Every score below is the percentage of answers choosing the opposite-of-Community-Alignment option (that option = 100; the Community Alignment preferred option = 0). Within a row, Post-DPO / Teacher / Treatment / Control are scored on that trait’s 20 questions (200 samples per question).
 
-| Column | Meaning |
-| --- | --- |
-| **Δwin** | WIMHF win-rate gap for the trait (from preference data; not from these questions). |
-| **Post-DPO** | Model after Community Alignment DPO, no system prompt (the pipeline starting point). |
-| **Teacher** | Same post-DPO model, with a system prompt that pushes the opposite trait. |
-| **Treatment / Control** | Students continued from the post-DPO model after fine-tuning on number sequences generated with vs without that system prompt (best checkpoint across 2 epochs). |
-| **Treatment−control** | Extra percentage points of opposite-trait answers for treatment over control. This is the subliminal-transfer gap. |
+<table style="border-collapse: collapse; border: 1px solid #444; margin: 0.75em 0 1.25em;">
+<thead>
+<tr>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Column</th>
+<th style="border-bottom: 1px solid #444; text-align: left; padding: 0.4em 0.85em;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;"><strong>Δwin</strong></td><td style="text-align: left; padding: 0.4em 0.85em;">WIMHF win-rate gap for the trait (from preference data; not from these questions).</td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;"><strong>Post-DPO</strong></td><td style="text-align: left; padding: 0.4em 0.85em;">Model after Community Alignment DPO, no system prompt (the pipeline starting point).</td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;"><strong>Teacher</strong></td><td style="text-align: left; padding: 0.4em 0.85em;">Same post-DPO model, with a system prompt that pushes the opposite trait.</td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;"><strong>Treatment / Control</strong></td><td style="text-align: left; padding: 0.4em 0.85em;">Students continued from the post-DPO model after fine-tuning on number sequences generated with vs without that system prompt (best checkpoint across 2 epochs).</td></tr>
+<tr><td style="text-align: left; padding: 0.4em 0.85em;"><strong>Treatment−control</strong></td><td style="text-align: left; padding: 0.4em 0.85em;">Extra percentage points of opposite-trait answers for treatment over control. This is the subliminal-transfer gap.</td></tr>
+</tbody>
+</table>
 
 Two quick examples of what the score means:
 
