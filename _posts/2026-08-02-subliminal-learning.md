@@ -161,9 +161,9 @@ On Olmo the relationship is significant once we keep traits with product at leas
 
 If we instead filter and correlate on `|Δwin|` alone (threshold 15), Olmo looks even stronger (Pearson r ≈ −0.87, p ≈ 0.002), while Llama-Tulu does not (r ≈ −0.16, not significant). Prevalence helps on Llama-Tulu; on Olmo, win-rate gap alone is already enough.
 
-{% include figure.html path="assets/img/olmo_product_T150.png" title="Olmo preference-strength product vs Treatment−Control" caption="Figure 1. Olmo at |Δwin| × prevalence ≥ 150. Full per-trait scores are in Appendix A." class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/subliminal-learning/olmo_product_T150.png" title="Olmo preference-strength product vs Treatment−Control" caption="Figure 1. Olmo at |Δwin| × prevalence ≥ 150. Full per-trait scores are in Appendix A." class="img-fluid rounded z-depth-1" %}
 
-{% include figure.html path="assets/img/tulu_product_T300.png" title="Llama-Tulu preference-strength product vs Treatment−Control" caption="Figure 2. Llama-Tulu at |Δwin| × prevalence ≥ 300. Full table in Appendix A." class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/subliminal-learning/tulu_product_T300.png" title="Llama-Tulu preference-strength product vs Treatment−Control" caption="Figure 2. Llama-Tulu at |Δwin| × prevalence ≥ 300. Full table in Appendix A." class="img-fluid rounded z-depth-1" %}
 
 On both models, within these subsets, larger `|Δwin| × prevalence` goes with smaller Treatment−Control: the strongest traits in the preference data show smaller transfer gaps than traits that still clear the cut but sit lower on the product.
 
@@ -921,7 +921,7 @@ The product-threshold sweep does not show a stable inverse pattern until a very 
 
 For completeness, the product ≥ 150 scatter and full table:
 
-{% include figure.html path="assets/img/qwen_product_T150.png" title="Qwen preference-strength product vs Treatment−Control" caption="Qwen at |Δwin| × prevalence ≥ 150." class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/subliminal-learning/qwen_product_T150.png" title="Qwen preference-strength product vs Treatment−Control" caption="Qwen at |Δwin| × prevalence ≥ 150." class="img-fluid rounded z-depth-1" %}
 
 <table style="border-collapse: collapse; border: 1px solid #444; margin: 0.75em 0 1.25em; width: 100%;">
 <thead>
