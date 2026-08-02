@@ -181,10 +181,10 @@ WIMHF’s Δwin and prevalence are themselves estimates, and how much a given mo
 
 ## References
 
-- Cloud, A., Le, M., Chua, J., Betley, J., Sztyber-Betley, A., Hilton, J., Marks, S., & Evans, O. (2025). Subliminal Learning: Language models transmit behavioral traits via hidden signals in data. arXiv:2507.14805.
-- Movva, R., Milli, S., Min, S., & Pierson, E. (2025). What’s In My Human Feedback? Learning Interpretable Descriptions of Preference Data. arXiv:2510.26202.
-- Bhatia, M., Nayak, S., Kamath, G., Mosbach, M., Stańczak, K., Shwartz, V., & Reddy, S. (2025). Value Drifts: Tracing Value Alignment During LLM Post-Training. arXiv:2510.26707.
-- Zhang, L. H., Milli, S., Jusko, K., Smith, J., Amos, B., Bouaziz, W., Revel, M., Kussman, J., Sheynin, Y., Titus, L., Radharapu, B., Yu, J., Sarma, V., Rose, K., & Nickel, M. (2025). Cultivating Pluralism In Algorithmic Monoculture: The Community Alignment Dataset. arXiv:2507.09650.
+- Cloud, Alex, et al. "Subliminal learning: Language models transmit behavioral traits via hidden signals in data." arXiv preprint arXiv:2507.14805 (2025).
+- Movva, Rajiv, et al. "What's In My Human Feedback? Learning Interpretable Descriptions of Preference Data." International Conference on Learning Representations. Vol. 2026. 2026.
+- Bhatia, Mehar, et al. "Value drifts: Tracing value alignment during llm post-training." arXiv preprint arXiv:2510.26707 (2025).
+- Stray, Jonathan, et al. "Political Neutrality as Balanced Approval: A Large-Scale Human Evaluation of AI Responses." arXiv preprint arXiv:2605.28911 (2026).
 
 ---
 
