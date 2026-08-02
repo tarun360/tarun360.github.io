@@ -30,7 +30,7 @@ Movva et al. (2025) (*What’s In My Human Feedback?*, WIMHF) find interpretable
 
 Because we always try to transfer the *opposite* of the Community Alignment preference, a natural difficulty score is
 
-**|Δwin| × prevalence**.
+`|Δwin| × prevalence`
 
 Δwin says how sharp the preference is when the feature shows up. Prevalence says how often that signal appears during preference training. The product is a rough measure of how much preference mass that trait carries into DPO, and therefore how hard it should be to push the opposite side afterward.
 
