@@ -30,6 +30,16 @@ Here are some quotes I find insightful and personally impactful.
 </details>
 
 <details>
+<summary>Buddhism / Mindfullness</summary>
+<ul>
+<li><i>"When an ordinary person is struck by pain, they grieve, resist, and lament — as if shot by a second arrow right where the first one landed. So they feel two pains: one in the body, and one in the mind. A wise person, struck by the same pain, feels only the first arrow. They experience the physical hurt but do not add sorrow, resistance, or despair on top of it. The first arrow is the pain life brings; the second arrow is the suffering we create by how we react. The first is unavoidable. The second is optional."</i> <i>(Sallatha Sutta)</i></li>
+<li><i>"Our habitual identification with thought—that is, our failure to recognize thoughts as thoughts, as appearances in consciousness—is a primary source of human suffering. It also gives rise to the illusion that a separate self is living inside one's head."</i> <i>(Waking up, Sam Harris)</i></li> 
+<li><i>"The problem is not thoughts themselves but the state of thinking without knowing that we are thinking."</i> <i>(Waking up, Sam Harris)</i></li> 
+<li><i>"We can directly experience that consciousness is never improved or harmed by what it knows. Making this discovery, again and again, is the basis of spiritual life."</i> <i>(Waking up, Sam Harris)</i></li>   
+</ul>
+</details>
+
+<details>
 <summary>Georg Cantor</summary>
 <ul>
 <li><i>“To ask the right question is harder than to answer it.”</i></li>
@@ -47,7 +57,6 @@ Here are some quotes I find insightful and personally impactful.
 <details>
 <summary>Ralph Waldo Emerson</summary>
 <ul>
-<li><i>"A little integrity is better than any career"</i></li>
 <li><i>"In every work of genius we recognize our own rejected thoughts: they come back to us with a certain alienated majesty."</i></li>
 <li><i>"There is a time in every man’s education when he arrives at the conviction that envy is ignorance; that imitation is suicide; that he must take himself for better, for worse, as his portion; that though the wide universe is full of good, no kernel of nourishing corn can come to him but through his toil bestowed on that plot of ground which is given to him to till. The power which resides in him is new in nature, and none but he knows what that is which he can do, nor does he know until he has tried."</i></li>
  </ul>
@@ -71,13 +80,6 @@ Here are some quotes I find insightful and personally impactful.
 <summary>Werner Heisenberg</summary>
 <ul>
 <li><i>"An expert is someone who knows some of the worst mistakes that can be made in his subject, and how to avoid them.”</i></li>
- </ul>
-</details>
-
-<details>
-<summary>Horace</summary>
-<ul>
-<li><i>"The just man, firm of purpose"</i></li>
  </ul>
 </details>
 
