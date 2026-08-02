@@ -35,7 +35,8 @@ Here are some quotes I find insightful and personally impactful.
 <li><i>"When an ordinary person is struck by pain, they grieve, resist, and lament — as if shot by a second arrow right where the first one landed. So they feel two pains: one in the body, and one in the mind. A wise person, struck by the same pain, feels only the first arrow. They experience the physical hurt but do not add sorrow, resistance, or despair on top of it. The first arrow is the pain life brings; the second arrow is the suffering we create by how we react. The first is unavoidable. The second is optional."</i> <i>(Sallatha Sutta)</i></li>
 <li><i>"Our habitual identification with thought—that is, our failure to recognize thoughts as thoughts, as appearances in consciousness—is a primary source of human suffering. It also gives rise to the illusion that a separate self is living inside one's head."</i> <i>(Waking up, Sam Harris)</i></li> 
 <li><i>"The problem is not thoughts themselves but the state of thinking without knowing that we are thinking."</i> <i>(Waking up, Sam Harris)</i></li> 
-<li><i>"We can directly experience that consciousness is never improved or harmed by what it knows. Making this discovery, again and again, is the basis of spiritual life."</i> <i>(Waking up, Sam Harris)</i></li>   
+<li><i>"We can directly experience that consciousness is never improved or harmed by what it knows. Making this discovery, again and again, is the basis of spiritual life."</i> <i>(Waking up, Sam Harris)</i></li>  
+<li><i>"The point of meditation isn't to improve your mind-it's to recognize what it's already like prior to identification with thought."</i> <i>(Waking up, Sam Harris)</i></li>   
 </ul>
 </details>
 
