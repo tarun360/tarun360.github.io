@@ -9,20 +9,6 @@ nav_order: 4
 Here are some quotes I find insightful and personally impactful.
 
 <details>
-<summary>Samuel Beckett</summary>
-<ul>
-<li><i>"Ever tried. Ever failed. No matter. Try again. Fail again. Fail better."</i> <i>(The real motto of optimism)</i></li>
- </ul>
-</details>
-
-<details>
-<summary>Jorge Luis Borges</summary>
-<ul>
-<li><i>“What man of us has never felt, walking through the twilight or writing down a date from his past, that he has lost something infinite?”</i></li>
- </ul>
-</details>
-
-<details>
 <summary>Jacob Bronowski</summary>
 <ul>
 <li><i>"It is important that students bring a certain ragamuffin, barefoot, irreverence to their studies; they are not here to worship what is known, but to question it."</i> <i>(The Ascent of Man)</i></li>
